@@ -1,0 +1,1739 @@
+{
+	"info": {
+		"_postman_id": "ddd492ec-fa00-40af-879c-e542039d7ae6",
+		"name": "Recetario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Insert Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"webSiteName\": \"test8\",\r\n        \"password_\": \"123\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost/recetarioBackend/controller/auth/auth.controller.php?op=insertar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"recetarioBackend",
+								"controller",
+								"auth",
+								"auth.controller.php"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "insertar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"webSiteName\": \"test8\",\r\n        \"password_\": \"123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/recetarioBackend/controller/auth/auth.controller.php?op=login",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"recetarioBackend",
+								"controller",
+								"auth",
+								"auth.controller.php"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "login"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RecipeBook",
+			"item": [
+				{
+					"name": "headerProcedureRecipeBook",
+					"item": [
+						{
+							"name": "InsertHeaderProcRecipeBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerProcedure\": \"Amor en un Brazo Gitano 2020\",\r\n        \"idRecipeBook\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerProRecipeBook.controller.php?op=insertHProRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerProRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertHProRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateHeaderProcRecipeBook",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerProcedure\": \"Amor en un Brazo Gitano 2022\",\r\n        \"idRecipeBook\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerProRecipeBook.controller.php?op=updateHeaderProRecipeBook&idHeaderProcedureRecipeBook=4",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerProRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateHeaderProRecipeBook"
+										},
+										{
+											"key": "idHeaderProcedureRecipeBook",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteHeaderProcRecipeBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerProRecipeBook.controller.php?op=deleteHeaderProRecipeBook&idHeaderProcedureRecipeBook=4",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerProRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteHeaderProRecipeBook"
+										},
+										{
+											"key": "idHeaderProcedureRecipeBook",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All HeaderProcRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerProRecipeBook.controller.php?op=getHeaderProRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerProRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getHeaderProRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by HeaderProcRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerProRecipeBook.controller.php?op=getbyIdHeaderProRecipeBook&idHeaderProcedureRecipeBook=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerProRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getbyIdHeaderProRecipeBook"
+										},
+										{
+											"key": "idHeaderProcedureRecipeBook",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "procedureRecipeBook",
+					"item": [
+						{
+							"name": "InsertProcedureRecipeBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"procedureRecipeBookStep\": \"Colocar en la batidora; premezcla, huevos y agua.\",\r\n        \"idHeaderProcedureRecipeBook\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=insertHProcedureRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"procedureRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertHProcedureRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateProcedureRecipeBook",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"procedureRecipeBookStep\": \"2. Colocar en la batidora; premezcla, huevos y agua.\",\r\n        \"idHeaderProcedureRecipeBook\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=updateProcedureRecipeBook&idProcedureRecipeBook=22",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"procedureRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateProcedureRecipeBook"
+										},
+										{
+											"key": "idProcedureRecipeBook",
+											"value": "22"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteRecipeBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=deleteProcedureRecipeBook&idProcedureRecipeBook=23",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"procedureRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteProcedureRecipeBook"
+										},
+										{
+											"key": "idProcedureRecipeBook",
+											"value": "23"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All ProcedureRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=getAllProcedureRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"procedureRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllProcedureRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by idProcedureRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=byIdProcedureBook&idProcedureRecipeBook=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"procedureRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdProcedureBook"
+										},
+										{
+											"key": "idProcedureRecipeBook",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "headerIngredientRecipeBook",
+					"item": [
+						{
+							"name": "InsertHeaderIngredientRecipeBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerName\": \"PASTA CIGARRETE\",\r\n        \"idRecipeBook\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=insertHIngreRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerIngreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertHIngreRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateHeaderIngredientRecipeBook",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerName\": \"PASTA CIGARRETE 4\",\r\n        \"idRecipeBook\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=updateHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerIngreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateHeaderIngreRecipeBook"
+										},
+										{
+											"key": "idHeaderIngredientRecipeBook",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteHeaderIngredientRecipeBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=deleteHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerIngreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteHeaderIngreRecipeBook"
+										},
+										{
+											"key": "idHeaderIngredientRecipeBook",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All HeaderIngredientRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=getAllHeaderIngreRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerIngreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllHeaderIngreRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by HeaderIngredientRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=byIdHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"headerIngreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdHeaderIngreRecipeBook"
+										},
+										{
+											"key": "idHeaderIngredientRecipeBook",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ingredientRecipeBook",
+					"item": [
+						{
+							"name": "InsertIngredientRecipeBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Huevo\",\r\n        \"percentage\": \"75%\",\r\n        \"quantityPounds\": \"-\",\r\n        \"quantityOunces\": \"12.00\",\r\n        \"idHeaderIngredientRecipeBook\": 1\r\n       \r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=insertIngreRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"ingreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertIngreRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateIngredientRecipeBook",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Huevo Duro\",\r\n        \"percentage\": \"75%\",\r\n        \"quantityPounds\": \"-\",\r\n        \"quantityOunces\": \"12.00\",\r\n        \"idHeaderIngredientRecipeBook\": 1\r\n       \r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=updateIngreRecipeBook&idIngredient=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"ingreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateIngreRecipeBook"
+										},
+										{
+											"key": "idIngredient",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteIngredientRecipeBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=deleteIngreRecipeBook&idIngredient=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"ingreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteIngreRecipeBook"
+										},
+										{
+											"key": "idIngredient",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All IngredientRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=getAllIngreRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"ingreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllIngreRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by idIngredientRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=byIdIngreRecipeBook&idIngredient=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"ingreRecipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdIngreRecipeBook"
+										},
+										{
+											"key": "idIngredient",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "recipeBook",
+					"item": [
+						{
+							"name": "InsertRecipeBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"recipeBookName\": \"Manzanita 3\",\r\n        \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas\",\r\n        \"descriptionRecipe\": \"REVISE LA CALIDAD DE SUS INGREDIENTES\",\r\n        \"idAuth\": 2\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=insertRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateRecipeBook",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"recipeBookName\": \"Brazo gitano\",\r\n    \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas.\",\r\n    \"descriptionRecipe\": \"REVISE LA CALIDAD DE SUS INGREDIENTES.\",\r\n    \"idAuth\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=8",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateRecipeBook"
+										},
+										{
+											"key": "idRecipeBook",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteRecipeBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=8",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteRecipeBook"
+										},
+										{
+											"key": "idRecipeBook",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All RecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by idRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getbyIdRecipeBook&idRecipeBook=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getbyIdRecipeBook"
+										},
+										{
+											"key": "idRecipeBook",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "headerProcedureRecipe",
+					"item": [
+						{
+							"name": "InsertHeaderProcRecipe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerProcedure\": \"Proceso2020\",\r\n        \"idRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=insertHeaderProRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerProRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertHeaderProRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateHeaderProcRecipe",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerProcedure\": \"Proceso\",\r\n        \"idRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=updateHeaderProRecipe&idHeaderProcedureRecipe=2",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerProRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateHeaderProRecipe"
+										},
+										{
+											"key": "idHeaderProcedureRecipe",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteHeaderProcRecipe",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=deleteHeaderProRecipe&idHeaderProcedureRecipe=7",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerProRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteHeaderProRecipe"
+										},
+										{
+											"key": "idHeaderProcedureRecipe",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All HeaderProcRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=getHeaderProRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerProRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getHeaderProRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by  idHeaderProcRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=byIdHeaderProRecipe&idHeaderProcedureRecipe=2",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerProRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdHeaderProRecipe"
+										},
+										{
+											"key": "idHeaderProcedureRecipe",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "procedureRecipe",
+					"item": [
+						{
+							"name": "InsertProcedureRecipe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"procedureRecipeStep\": \"1.Pesa muy bien los ingredientes. Amasa todos los ingredientes por 2 minutos y desarrolla el gluten hasta lograr una textura elástica\",\r\n        \"idHeaderProcedureRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=insertProcedureRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"procedureRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertProcedureRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateProcedureRecipe",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"procedureRecipeStep\": \"2.Ponla a reposar durante 5 minutos.\",\r\n        \"idHeaderProcedureRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=updateProcedureRecipe&idProcedureRecipe=2",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"procedureRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateProcedureRecipe"
+										},
+										{
+											"key": "idProcedureRecipe",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteRecipe",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=deleteProcedureRecipe&idProcedureRecipe=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"procedureRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteProcedureRecipe"
+										},
+										{
+											"key": "idProcedureRecipe",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All ProcedureRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=getAllProcedureRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"procedureRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllProcedureRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by idProcedureRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=byIdProcedureRecipe&idProcedureRecipe=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"procedureRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdProcedureRecipe"
+										},
+										{
+											"key": "idProcedureRecipe",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "headerIngredientRecipe",
+					"item": [
+						{
+							"name": "InsertHeaderIngredientRecipe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerName\": \"(Masa madre 10-30%)\",\r\n        \"idRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=insertHIngreRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerIngreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertHIngreRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateHeaderIngredientRecipe",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerName\": \"(Masa madre 10-3011%)\",\r\n        \"idRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=updateHeaderIngreRecipe&idHeaderIngredientRecipe=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerIngreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateHeaderIngreRecipe"
+										},
+										{
+											"key": "idHeaderIngredientRecipe",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteHeaderIngredientRecipe",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=deleteHeaderIngreRecipe&idHeaderIngredientRecipe=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerIngreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteHeaderIngreRecipe"
+										},
+										{
+											"key": "idHeaderIngredientRecipe",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All HeaderIngredientRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=getAllHeaderIngreRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerIngreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllHeaderIngreRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by HeaderIngredientRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=byIdHeaderIngreRecipe&idHeaderIngredientRecipe=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"headerIngreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdHeaderIngreRecipe"
+										},
+										{
+											"key": "idHeaderIngredientRecipe",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ingredientRecipe",
+					"item": [
+						{
+							"name": "InsertIngredientRecipe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Agua fría\",\r\n        \"percentage\": \"100%\",\r\n        \"quantityPounds\": \"2\",\r\n        \"quantityOunces\": \"-\",\r\n        \"idHeaderIngredientRecipe\": 1\r\n       \r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=insertIngreRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"ingreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertIngreRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateIngredientRecipe",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Agua fría\",\r\n        \"percentage\": \"100%\",\r\n        \"quantityPounds\": \"2\",\r\n        \"quantityOunces\": \"-\",\r\n        \"idHeaderIngredientRecipe\": 1\r\n       \r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=updateIngreRecipe&idIngredient=2",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"ingreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateIngreRecipe"
+										},
+										{
+											"key": "idIngredient",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteIngredientRecipe",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=deleteIngreRecipe&idIngredient=3",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"ingreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteIngreRecipe"
+										},
+										{
+											"key": "idIngredient",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All IngredientRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=getAllIngreRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"ingreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllIngreRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by idIngredientRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=byIdIngreRecipe&idIngredient=10",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"ingreRecipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdIngreRecipe"
+										},
+										{
+											"key": "idIngredient",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "recipe",
+					"item": [
+						{
+							"name": "InsertRecipe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"recipeName\": \"Baguette 2\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 2\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=insertRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "insertRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateRecipe",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"recipeName\": \"Baguette 3\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 2\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=updateRecipe&idRecipe=6",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "updateRecipe"
+										},
+										{
+											"key": "idRecipe",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteRecipe",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=6",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "deleteRecipe"
+										},
+										{
+											"key": "idRecipe",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Recipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=getAllRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getAllRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by IdRecipe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=byIdRecipe&idRecipe=1",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "byIdRecipe"
+										},
+										{
+											"key": "idRecipe",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
