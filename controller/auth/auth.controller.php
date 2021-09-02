@@ -4,8 +4,14 @@
     require_once "../../connection/connection.php";
     require_once "../../models/auth/auth.model.php";
 
+
+
+
     $auth = new Auth();
     $body = json_encode(file_get_contents("php://input"),true);
+
+
+
 
     switch($_GET['op']){
 
@@ -37,11 +43,10 @@
             $datos = json_decode(file_get_contents('php://input'));
 
             if($datos != NULL) {
-
-                    if(auth::login($datos->webSiteName, $datos->password_)) {
+                     $responseToken=auth::login($datos->webSiteName, $datos->password_);
+                    if($responseToken) {
                         http_response_code(200);
-                        echo "Success login";
-
+                        echo $responseToken;
 
                     }
                     else {
