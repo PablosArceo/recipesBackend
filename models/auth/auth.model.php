@@ -29,14 +29,18 @@
 
 
             $query1 ="SELECT password_ FROM AUTH WHERE webSiteName='$webSiteName'";
-            $idAuth ="SELECT idAuth FROM AUTH WHERE webSiteName='$webSiteName'";
+            $query2 ="SELECT idAuth FROM AUTH WHERE webSiteName='$webSiteName'";
 
             $resultQuery=$db->query($query1);
+            $resultNew=$db->query($query2);
+            $result2= $resultNew->fetch_array()[0] ?? "";
+
+
             $result= $resultQuery->fetch_array()[0] ?? "";
             if($resultQuery){
                 $confirm=password_verify($password_, strval($result));
                 if($confirm==1){
-                   return authNew::createToken($idAuth,$webSiteName,$password_);
+                   return authNew::createToken($result2,$webSiteName,$password_);
 
                 }
                 

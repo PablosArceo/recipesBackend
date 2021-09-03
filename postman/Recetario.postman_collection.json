@@ -41,11 +41,28 @@
 				{
 					"name": "Login",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"webSiteName\": \"test8\",\r\n        \"password_\": \"123\"\r\n    }",
+							"raw": "  {\r\n        \"webSiteName\": \"test8\",\r\n        \"password_\": \"123\"\r\n    }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -744,11 +761,27 @@
 						{
 							"name": "InsertRecipeBook",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA2NjEzOTgsImV4cCI6MTYzMDY2NDk5OCwiaWRBdXRoIjoiNyIsIndlYlNpdGVOYW1lIjoidGVzdDgiLCJwYXN3b3JkXyI6IjEyMyJ9.NZRQwMTq0cCvRTuc01XwwuquwsxBaRc_Lc-PmRxq5Ng",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeBookName\": \"Manzanita 3\",\r\n        \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas\",\r\n        \"descriptionRecipe\": \"REVISE LA CALIDAD DE SUS INGREDIENTES\",\r\n        \"idAuth\": 2\r\n    }",
+									"raw": "  {\r\n        \"recipeBookName\": \"Manzanita 3\",\r\n        \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas\",\r\n        \"descriptionRecipe\": \"REVISE LA CALIDAD DE SUS INGREDIENTES\",\r\n        \"idAuth\": 7\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -780,10 +813,16 @@
 							"name": "UpdateRecipeBook",
 							"request": {
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA2NjA2NTYsImV4cCI6MTYzMDY2NDI1NiwiaWRBdXRoIjoiNyIsIndlYlNpdGVOYW1lIjoidGVzdDgiLCJwYXN3b3JkXyI6IjEyMyJ9.eIEWsxY6gg7YMLdo6IGLQjgf9DZk8oqkEFldMgAS7mg",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"recipeBookName\": \"Brazo gitano\",\r\n    \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas.\",\r\n    \"descriptionRecipe\": \"REVISE LA CALIDAD DE SUS INGREDIENTES.\",\r\n    \"idAuth\": 2\r\n}\r\n",
+									"raw": "{\r\n    \"recipeBookName\": \"Brazo gitano\",\r\n    \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas.\",\r\n    \"descriptionRecipe\": \"REVISE LA CALIDAD DE SUS INGREDIENTES.\",\r\n    \"idAuth\": 7\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -791,7 +830,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=8",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=50",
 									"host": [
 										"localhost"
 									],
@@ -808,7 +847,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "8"
+											"value": "50"
 										}
 									]
 								}
@@ -819,9 +858,15 @@
 							"name": "DeleteRecipeBook",
 							"request": {
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA2NjEzOTgsImV4cCI6MTYzMDY2NDk5OCwiaWRBdXRoIjoiNyIsIndlYlNpdGVOYW1lIjoidGVzdDgiLCJwYXN3b3JkXyI6IjEyMyJ9.NZRQwMTq0cCvRTuc01XwwuquwsxBaRc_Lc-PmRxq5Ng",
+										"type": "text"
+									}
+								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=8",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=51",
 									"host": [
 										"localhost"
 									],
@@ -838,7 +883,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "8"
+											"value": "51"
 										}
 									]
 								}
@@ -1575,10 +1620,16 @@
 							"name": "InsertRecipe",
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA2NjEzOTgsImV4cCI6MTYzMDY2NDk5OCwiaWRBdXRoIjoiNyIsIndlYlNpdGVOYW1lIjoidGVzdDgiLCJwYXN3b3JkXyI6IjEyMyJ9.NZRQwMTq0cCvRTuc01XwwuquwsxBaRc_Lc-PmRxq5Ng",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"Baguette 2\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 2\r\n    }",
+									"raw": "  {\r\n        \"recipeName\": \"Baguette 2\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 7\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1610,10 +1661,16 @@
 							"name": "UpdateRecipe",
 							"request": {
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA2NjEzOTgsImV4cCI6MTYzMDY2NDk5OCwiaWRBdXRoIjoiNyIsIndlYlNpdGVOYW1lIjoidGVzdDgiLCJwYXN3b3JkXyI6IjEyMyJ9.NZRQwMTq0cCvRTuc01XwwuquwsxBaRc_Lc-PmRxq5Ng",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"Baguette 3\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 2\r\n    }",
+									"raw": "  {\r\n        \"recipeName\": \"Baguette 3\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 7\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1621,7 +1678,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=updateRecipe&idRecipe=6",
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=updateRecipe&idRecipe=9",
 									"host": [
 										"localhost"
 									],
@@ -1638,7 +1695,7 @@
 										},
 										{
 											"key": "idRecipe",
-											"value": "6"
+											"value": "9"
 										}
 									]
 								}
@@ -1649,9 +1706,15 @@
 							"name": "DeleteRecipe",
 							"request": {
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA2NjEzOTgsImV4cCI6MTYzMDY2NDk5OCwiaWRBdXRoIjoiNyIsIndlYlNpdGVOYW1lIjoidGVzdDgiLCJwYXN3b3JkXyI6IjEyMyJ9.NZRQwMTq0cCvRTuc01XwwuquwsxBaRc_Lc-PmRxq5Ng",
+										"type": "text"
+									}
+								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=6",
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=9",
 									"host": [
 										"localhost"
 									],
@@ -1668,7 +1731,7 @@
 										},
 										{
 											"key": "idRecipe",
-											"value": "6"
+											"value": "9"
 										}
 									]
 								}

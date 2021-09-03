@@ -16,21 +16,22 @@
             $datos = json_decode(file_get_contents('php://input'));
             if($datos != NULL) {
 
-                    
-                    if(recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe, $datos->idAuth)) {
+                    $createRecipeBook =recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe, $datos->idAuth);
+                    if($createRecipeBook) {
+                          print_r("recipeBook registered");
                         http_response_code(200);
-                        echo "recipeBook registered";
-
                     }
                     else {
-                        http_response_code(400);
                         echo "recipeBook no registered, complete all data";
+                        http_response_code(400);
+
 
                     }
                 }
                 else {
-                    http_response_code(405);
                     echo "internal error";
+                    http_response_code(405);
+
 
                 }
                 break;
