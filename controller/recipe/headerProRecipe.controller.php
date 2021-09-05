@@ -101,7 +101,6 @@
             break;
 
             
-
             case 'getYourHProRecipe':
                 if(headerProRecipe::getYourHProRecipe()) {
                         http_response_code(200);
