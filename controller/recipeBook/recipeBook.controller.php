@@ -18,11 +18,11 @@
 
                     $createRecipeBook =recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe, $datos->idAuth);
                     if($createRecipeBook) {
-                          print_r("recipeBook registered");
+                        echo("recipeBook registered");
                         http_response_code(200);
                     }
                     else {
-                        echo "recipeBook no registered, complete all data";
+                        echo "recipeBook no registered, complete all data correctly";
                         http_response_code(400);
 
 
@@ -93,6 +93,18 @@
                 if(recipeBook::getAllRecipeBook()) {
                         http_response_code(200);
                         echo json_encode(recipeBook::getAllRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
+
+
+            case 'getYourRecipeBook':
+                if(recipeBook::getYourRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(recipeBook::getYourRecipeBook());
                                 }
                 else {
                         http_response_code(400);

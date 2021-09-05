@@ -25,7 +25,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerIngredientRecipe no registered, complete all data";
+                        echo "headerIngredientRecipe no registered, complete all data correctly";
 
                     }
                 }
@@ -101,8 +101,19 @@
                         }
             break;
 
+            
+            case 'getYourIngreRecipe':
+                if(headerIngredientRecipe::getYourIngreRecipe()) {
+                        http_response_code(200);
+                        echo json_encode(headerIngredientRecipe::getYourIngreRecipe());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
 
-                
+            
             case 'byIdHeaderIngreRecipe':
                 if(isset($_GET['idHeaderIngredientRecipe'])) {
                     $result = json_encode(headerIngredientRecipe::byIdHeaderIngreRecipe($_GET['idHeaderIngredientRecipe']));

@@ -24,7 +24,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "ProcedureRecipeBook no registered, complete all data";
+                        echo "ProcedureRecipeBook no registered, complete all data, correctly";
 
                     }
                 }
@@ -93,6 +93,17 @@
                 if(procedureRecipeBook::getAllProcedureRecipeBook()) {
                         http_response_code(200);
                         echo json_encode(ProcedureRecipeBook::getAllProcedureRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
+
+            case 'getYourProcedureRecipeBook':
+                if(procedureRecipeBook::getYourProcedureRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(ProcedureRecipeBook::getYourProcedureRecipeBook());
                                 }
                 else {
                         http_response_code(400);

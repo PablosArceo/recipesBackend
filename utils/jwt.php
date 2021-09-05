@@ -16,11 +16,10 @@ class AuthNew
 
         $token = array(
             'iat' => $time,
-            'exp' => $time + (60*60),
+            'exp' => $time + ( 604800.02* 604800.02),
             
                 'idAuth' => $idAuth,
                 'webSiteName'=> $webSiteName,
-                'pasword_'=> $pasword_,
         );
 
         return JWT::encode($token, self::$secret_key);

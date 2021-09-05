@@ -23,7 +23,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "recipe no registered, complete all data";
+                        echo "recipe no registered, complete all data correctly" ;
 
                     }
                 }
@@ -91,6 +91,18 @@
                 if(Recipe::getAllRecipe()) {
                         http_response_code(200);
                         echo json_encode(Recipe::getAllRecipe());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
+
+
+            case 'getYourRecipe':
+                if(Recipe::getYourRecipe()) {
+                        http_response_code(200);
+                        echo json_encode(Recipe::getYourRecipe());
                                 }
                 else {
                         http_response_code(400);

@@ -24,7 +24,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerProcedureRecipeBook no registered, complete all data";
+                        echo "headerProcedureRecipeBook no registered, complete all data correctly";
 
                     }
                 }
@@ -100,11 +100,20 @@
                         }
             break;
 
-
+            case 'getYourHProRecipeBook':
+                if(headerProRecipeBook::getYourHProRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(headerProRecipeBook::getYourHProRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
                 
             case 'getbyIdHeaderProRecipeBook':
                 if(isset($_GET['idHeaderProcedureRecipeBook'])) {
-                    $result = json_encode(headerProRecipeBook::byIdHeaderProRecipeBook($_GET['idHeaderProcedureRecipeBook']));
+                    $result = json_encode(headerProRecipeBook::getbyIdHeaderProRecipeBook($_GET['idHeaderProcedureRecipeBook']));
                     $comprobacion=$result=="[]";
                     if($comprobacion==1){
                     echo "No headerProcedureRecipeBook  was found with this id";

@@ -22,7 +22,7 @@ switch ($_GET['op']) {
                 echo "ProcedureRecipe registered";
             } else {
                 http_response_code(400);
-                echo "ProcedureRecipe no registered, complete all data";
+                echo "ProcedureRecipe no registered, complete all data correctly";
             }
         } else {
             http_response_code(405);
@@ -87,6 +87,16 @@ switch ($_GET['op']) {
         }
         break;
 
+        case 'getYourProcedureRecipe':
+            if(procedureRecipe::getYourProcedureRecipe()) {
+                    http_response_code(200);
+                    echo json_encode(procedureRecipe::getYourProcedureRecipe());
+                            }
+            else {
+                    http_response_code(400);
+                    echo "no data";
+                    }
+        break;
 
 
     case 'byIdProcedureRecipe':

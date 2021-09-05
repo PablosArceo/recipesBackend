@@ -24,7 +24,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerProcedureRecipe no registered, complete all data";
+                        echo "headerProcedureRecipe no registered, complete all data correctly";
 
                     }
                 }
@@ -101,7 +101,18 @@
             break;
 
 
-                
+            case 'getYourHProRecipe':
+                if(headerProRecipe::getYourHProRecipe()) {
+                        http_response_code(200);
+                        echo json_encode(headerProRecipe::getYourHProRecipe());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
+
+                        
             case 'byIdHeaderProRecipe':
                 if(isset($_GET['idHeaderProcedureRecipe'])) {
                     $result = json_encode(headerProRecipe::byIdHeaderProRecipe($_GET['idHeaderProcedureRecipe']));

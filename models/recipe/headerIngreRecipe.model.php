@@ -1,82 +1,136 @@
 <?php
-class headerIngredientRecipe extends Connection
-{
+require_once "../../utils/jwt.php";
 
 
-    public static function insertHeaderIngreRecipe($headerName, $idRecipe)
-    {
+            class headerIngredientRecipe      extends Connection
+            {
 
-        $db = new Connection();
-        $query = "INSERT INTO headerIngredientRecipe (headerName,idRecipe)
-            VALUES('" . $headerName . "', '" . $idRecipe . "')";
-        $db->query($query);
-        if ($db->affected_rows) {
-            return TRUE;
-        }
-        return FALSE;
-    }
+                public static function exectQuery($sentQuery){
+                    $db = new Connection();
+                    $resultQuery = $db->query($sentQuery);
+                    return $resultQuery;
+                }
 
-    public static function updateHeaderIngreRecipe($idHeaderIngredientRecipe, $headerName, $idRecipe)
-    {
-        $db = new Connection();
-        $query = "UPDATE headerIngredientRecipe SET
-            headerName='" . $headerName . "', idRecipe='" . $idRecipe . "'
-            WHERE idHeaderIngredientRecipe=$idHeaderIngredientRecipe";
-        $db->query($query);
-        if ($db->affected_rows) {
-            return TRUE;
-        }
-        return FALSE;
-    }
+                  public static function exectQueryOne($sentQuery){
+                    $db = new Connection();
+                    $resultQuery = $db->query($sentQuery);
+                    $result = $resultQuery->fetch_array()[0] ?? "";
+                    return $result;
+                }
 
-    public static function deleteHeaderIngreRecipe($idHeaderIngredientRecipe)
-    {
-        $db = new Connection();
-        $query = "DELETE FROM headerIngredientRecipe WHERE idHeaderIngredientRecipe=$idHeaderIngredientRecipe";
-        $db->query($query);
-        if ($db->affected_rows) {
-            return TRUE;
-        }
-        return FALSE;
-    }
+                public static function printData($resultado){
+                    $datos = [];
+                    if($resultado->num_rows) {
+                        while($row = $resultado->fetch_assoc()) {
+                            $datos[] = [
+                                'idHeaderIngredientRecipe' => $row['idHeaderIngredientRecipe'],
+                                'headerName' => $row['headerName'],
+                                'idRecipe' => $row['idRecipe'],
+                            ];
+                        }
+                          return $datos;
+                      }
+                          return $datos;
+                  }
 
-    public static function getAllHeaderIngreRecipe()
-    {
-        $db = new Connection();
-        $query = "SELECT *FROM headerIngredientRecipe";
-        $resultado = $db->query($query);
-        $datos = [];
-        if ($resultado->num_rows) {
-            while ($row = $resultado->fetch_assoc()) {
-                $datos[] = [
-                    'idHeaderIngredientRecipe' => $row['idHeaderIngredientRecipe'],
-                    'headerName' => $row['headerName'],
-                    'idRecipe' => $row['idRecipe'],
-                ];
+    
+                public static function globalService($sentQuery, $idAuth, $all, $joinQuery=false)
+                {
+                    $secret_key = 'passAuth';
+                    $cabezera = getallheaders();
+                    $token = $cabezera["Authorization"];
+
+
+                    if ($token) {
+                        $query2 = AuthNew::Check($token, $secret_key);
+                        $idAuthVerify = get_object_vars($query2)["idAuth"];
+                        
+                        if ($idAuthVerify == $idAuth) {
+                            return self::exectQuery($sentQuery);
+                        } else if ($joinQuery == TRUE){
+                            $sentQuery .=$idAuthVerify;
+                             return self::exectQuery($sentQuery);
+                           
+                        } else if ($all == TRUE){
+                            return self::exectQuery($sentQuery);
+                        } else if($idAuth == null){
+                            return FALSE;
+                        } else {
+                            echo "You do not have the necessary permissions  ,";
+                        }
+                    }
+                    else{
+                        echo "the request does not have a token   ";
+                    }
+
+                }
+
+
+                public static function insertHeaderIngreRecipe($headerName, $idRecipe)
+                {
+                    $sentQuery = "INSERT INTO headerIngredientRecipe (headerName,idRecipe)
+                    VALUES('".$headerName."', '".$idRecipe."')";
+                    return self::globalService($sentQuery, $idRecipe, TRUE); 
+                }
+
+
+                public static function updateHeaderIngreRecipe($idHeaderIngredientRecipe, $headerName, $idRecipe)
+                {
+                    $query2 = "SELECT idRecipe FROM headerIngredientRecipe WHERE idHeaderIngredientRecipe='{$idHeaderIngredientRecipe}'";
+                    $result = self::exectQueryOne($query2);
+
+                    if($result){
+                      $sentQuery = "UPDATE headerIngredientRecipe SET
+                      headerName='".$headerName."', idRecipe='".$idRecipe."'
+                      WHERE idHeaderIngredientRecipe=$idHeaderIngredientRecipe";
+                      return self::globalService($sentQuery, $idRecipe, TRUE);
+                    } else {
+                      return FALSE;
+                    }
+                 }
+       
+
+
+
+                 public static function deleteHeaderIngreRecipe($idHeaderIngredientRecipe)
+                 {
+                    $query2 = "SELECT re.idAuth
+                    FROM headerIngredientRecipe pr JOIN recipe he 
+                    ON pr.idRecipe =he.idRecipe
+                    JOIN recipe re 
+                    ON re.idRecipe=he.idRecipe
+                    WHERE idHeaderIngredientRecipe='{$idHeaderIngredientRecipe}'";
+                     $result = self::exectQueryOne($query2);
+                     $sentQuery = "DELETE FROM headerIngredientRecipe WHERE idHeaderIngredientRecipe=$idHeaderIngredientRecipe";
+                     return self::globalService($sentQuery, $result, FALSE);
+                 }
+ 
+ 
+ 
+               public static function getAllHeaderIngreRecipe()
+                {
+                    $sentQuery ="SELECT *FROM headerIngredientRecipe";
+                    $resultado = self::globalService($sentQuery, null, TRUE);
+                    return self::printData($resultado);
+                }
+
+                
+               public static function getYourIngreRecipe()
+               {
+                   $sentQuery = "SELECT pr.idHeaderIngredientRecipe, pr.headerName, pr.idRecipe
+                   FROM headerIngredientRecipe pr JOIN recipe he 
+                   ON pr.idRecipe =he.idRecipe
+                   JOIN recipe re 
+                   ON re.idRecipe=he.idRecipe
+                   WHERE re.idAuth=";
+                   $resultado = self::globalService($sentQuery, null, TRUE, TRUE);
+                   return self::printData($resultado);
+               }
+
+                public static function byIdHeaderIngreRecipe($idHeaderIngredientRecipe): array
+                {
+                    $sentQuery = "SELECT *FROM headerIngredientRecipe WHERE idHeaderIngredientRecipe=$idHeaderIngredientRecipe";
+                    $resultado = self::globalService($sentQuery, null, TRUE);
+                    return self::printData($resultado);
+                }
             }
-            return $datos;
-        }
-        return $datos;
-    }
-
-
-    public static function byIdHeaderIngreRecipe($idHeaderIngredientRecipe): array
-    {
-        $db = new Connection();
-        $query = "SELECT *FROM headerIngredientRecipe WHERE idHeaderIngredientRecipe=$idHeaderIngredientRecipe";
-        $resultado = $db->query($query);
-        $datos = [];
-        if ($resultado->num_rows) {
-            while ($row = $resultado->fetch_assoc()) {
-                $datos[] = [
-                    'idHeaderIngredientRecipe' => $row['idHeaderIngredientRecipe'],
-                    'headerName' => $row['headerName'],
-                    'idRecipe' => $row['idRecipe'],
-                ];
-            }
-            return $datos;
-        } else {
-            return $datos;
-        }
-    }
-}

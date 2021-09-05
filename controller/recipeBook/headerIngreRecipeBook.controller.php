@@ -24,7 +24,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerIngredientRecipeBook no registered, complete all data";
+                        echo "headerIngredientRecipeBook no registered, complete all data correctly";
 
                     }
                 }
@@ -93,6 +93,17 @@
                 if(headerIngreRecipeBook::getAllHeaderIngreRecipeBook()) {
                         http_response_code(200);
                         echo json_encode(headerIngreRecipeBook::getAllHeaderIngreRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
+
+            case 'getYourIngreRecipeBook':
+                if(headerIngreRecipeBook::getYourIngreRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(headerIngreRecipeBook::getYourIngreRecipeBook());
                                 }
                 else {
                         http_response_code(400);

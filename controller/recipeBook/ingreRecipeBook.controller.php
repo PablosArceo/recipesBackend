@@ -25,7 +25,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "IngredienteRecipeBook no registered, complete all data";
+                        echo "IngredienteRecipeBook no registered, complete all data correctly";
 
                     }
                 }
@@ -101,6 +101,17 @@
                         }
             break;
 
+
+            case 'getYourIngredientRecipeBook':
+                if(ingredientRecipeBook::getYourIngredientRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(ingredientRecipeBook::getYourIngredientRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data";
+                        }
+            break;
 
                 
             case 'byIdIngreRecipeBook':
