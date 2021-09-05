@@ -31,7 +31,6 @@ switch ($_GET['op']) {
         break;
 
 
-
     case 'updateProcedureRecipe':
         $datos = json_decode(file_get_contents('php://input'));
         if ($datos != NULL) {
@@ -55,7 +54,6 @@ switch ($_GET['op']) {
         break;
 
 
-
     case 'deleteProcedureRecipe':
         $idProcedureRecipe = $_GET['idProcedureRecipe'];
 
@@ -74,7 +72,6 @@ switch ($_GET['op']) {
             echo "internal error ";
         }
         break;
-
 
 
     case 'getAllProcedureRecipe':

@@ -90,7 +90,6 @@ require_once "../../utils/jwt.php";
                  }
        
 
-
                  public static function deleteProcedureRecipeBook($idProcedureRecipeBook)
                  {
                     $query2 = "SELECT re.idAuth
@@ -105,7 +104,6 @@ require_once "../../utils/jwt.php";
                  }
  
  
- 
                public static function getAllProcedureRecipeBook()
                 {
                     $sentQuery = "SELECT * FROM procedureRecipeBook";
@@ -113,7 +111,7 @@ require_once "../../utils/jwt.php";
                     return self::printData($resultado);
                 }
 
-                
+            
                public static function getYourProcedureRecipeBook()
                {
                    $sentQuery = "SELECT pr.idProcedureRecipeBook, pr.procedureRecipeBookStep, pr.idHeaderProcedureRecipeBook 

@@ -9,7 +9,6 @@ class AuthNew
     private static $secret_key = 'passAuth';
 
 
-
     public static function createToken($idAuth, $webSiteName, $pasword_)
     {
         $time = time();

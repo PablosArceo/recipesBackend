@@ -62,7 +62,6 @@
                     break;
 
 
-           
             case 'deleteHeaderIngreRecipe':
                 $idHeaderIngredientRecipe=$_GET['idHeaderIngredientRecipe'];
 
@@ -88,8 +87,6 @@
               break;
 
 
-                
-
             case 'getAllHeaderIngreRecipe':
                 if(headerIngredientRecipe::getAllHeaderIngreRecipe()) {
                         http_response_code(200);
@@ -100,7 +97,6 @@
                         echo "no data";
                         }
             break;
-
             
             case 'getYourIngreRecipe':
                 if(headerIngredientRecipe::getYourIngreRecipe()) {
@@ -112,7 +108,6 @@
                         echo "no data";
                         }
             break;
-
             
             case 'byIdHeaderIngreRecipe':
                 if(isset($_GET['idHeaderIngredientRecipe'])) {

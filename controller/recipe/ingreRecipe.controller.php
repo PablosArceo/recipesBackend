@@ -37,7 +37,6 @@
                 break;
 
 
-
                 case 'updateIngreRecipe':
                     $datos = json_decode(file_get_contents('php://input'));
                     if($datos != NULL) {
@@ -61,7 +60,6 @@
 
                     }
                     break;
-
 
            
                     case 'deleteIngreRecipe':

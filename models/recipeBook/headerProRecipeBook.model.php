@@ -65,14 +65,12 @@ require_once "../../utils/jwt.php";
 
                 }
 
-
                 public static function insertHeaderProRecipeBook($headerProcedure, $idRecipeBook)
                 {
                     $sentQuery = "INSERT INTO headerProcedureRecipeBook (headerProcedure,idRecipeBook)
                     VALUES('".$headerProcedure."', '".$idRecipeBook."')";
                     return self::globalService($sentQuery, $idRecipeBook, TRUE); 
                 }
-
 
                 public static function updateHeaderProRecipeBook($idHeaderProcedureRecipeBook, $headerProcedure, $idRecipeBook)
                 {
@@ -89,9 +87,6 @@ require_once "../../utils/jwt.php";
                     }
                  }
        
-
-
-
                  public static function deleteHeaderProRecipeBook($idHeaderProcedureRecipeBook)
                  {
                     $query2 = "SELECT re.idAuth
@@ -106,7 +101,6 @@ require_once "../../utils/jwt.php";
                  }
  
  
- 
                public static function getAllHeaderProRecipeBook()
                 {
                     $sentQuery ="SELECT *FROM headerProcedureRecipeBook";
@@ -114,7 +108,7 @@ require_once "../../utils/jwt.php";
                     return self::printData($resultado);
                 }
 
-                
+        
                public static function getYourHProRecipeBook()
                {
                    $sentQuery = "SELECT pr.idHeaderProcedureRecipeBook, pr.headerProcedure, pr.idRecipeBook

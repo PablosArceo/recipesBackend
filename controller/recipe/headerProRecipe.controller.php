@@ -60,7 +60,6 @@
                     }
                     break;
 
-
            
             case 'deleteHeaderProRecipe':
                 $idHeaderProcedureRecipe=$_GET['idHeaderProcedureRecipe'];
@@ -87,8 +86,6 @@
               break;
 
 
-                
-
             case 'getHeaderProRecipe':
                 if(headerProRecipe::getAllHeaderProRecipe()) {
                         http_response_code(200);
@@ -99,7 +96,6 @@
                         echo "no data";
                         }
             break;
-
             
             case 'getYourHProRecipe':
                 if(headerProRecipe::getYourHProRecipe()) {
@@ -111,7 +107,6 @@
                         echo "no data";
                         }
             break;
-
                         
             case 'byIdHeaderProRecipe':
                 if(isset($_GET['idHeaderProcedureRecipe'])) {

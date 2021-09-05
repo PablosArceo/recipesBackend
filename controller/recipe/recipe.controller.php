@@ -59,7 +59,6 @@
                     break;
 
 
-           
             case 'deleteRecipe':
                  $idRecipe=$_GET['idRecipe'];
 
@@ -85,8 +84,6 @@
               break;
 
 
-                
-
             case 'getAllRecipe':
                 if(Recipe::getAllRecipe()) {
                         http_response_code(200);
@@ -109,7 +106,6 @@
                         echo "no data";
                         }
             break;
-
 
                 
             case 'byIdRecipe':

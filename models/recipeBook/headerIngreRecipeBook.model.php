@@ -73,7 +73,6 @@ require_once "../../utils/jwt.php";
                     return self::globalService($sentQuery, $idRecipeBook, TRUE); 
                 }
 
-
                 public static function updateHeaderIngreRecipeBook($idHeaderIngredientRecipeBook, $headerName, $idRecipeBook)
                 {
                     $query2 = "SELECT idRecipeBook FROM headerIngredientRecipeBook WHERE idHeaderIngredientRecipeBook='{$idHeaderIngredientRecipeBook}'";
@@ -90,8 +89,6 @@ require_once "../../utils/jwt.php";
                  }
        
 
-
-
                  public static function deleteHeaderIngreRecipeBook($idHeaderIngredientRecipeBook)
                  {
                     $query2 = "SELECT re.idAuth
@@ -104,7 +101,6 @@ require_once "../../utils/jwt.php";
                      $sentQuery = "DELETE FROM headerIngredientRecipeBook WHERE idHeaderIngredientRecipeBook=$idHeaderIngredientRecipeBook";
                      return self::globalService($sentQuery, $result, FALSE);
                  }
- 
  
  
                public static function getAllHeaderIngreRecipeBook()

@@ -67,14 +67,12 @@ require_once "../../utils/jwt.php";
   
                   }
 
-
                 public static function insertRecipeBook($recipeBookName, $performance, $descriptionRecipe, $idAuth)
                 {
                     $sentQuery = "INSERT INTO recipeBook (recipeBookName,performance,descriptionRecipe,idAuth)
                     VALUES('" . $recipeBookName . "', '" . $performance . "', '" . $descriptionRecipe . "','" . $idAuth . "')";
                     return self::globalService($sentQuery, $idAuth, FALSE);
                 }
-
 
                 public static function updateRecipeBook($idRecipeBook, $recipeBookName, $performance, $descriptionRecipe, $idAuth)
                 {
