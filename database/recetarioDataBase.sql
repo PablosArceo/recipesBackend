@@ -2,6 +2,7 @@
 CREATE DATABASE recetarioDataBase;
 USE recetarioDataBase;
 
+
 CREATE TABLE auth(
 	idAuth int not null auto_increment,
     webSiteName varchar (255) not null,
@@ -107,59 +108,6 @@ CREATE TABLE ingredientRecipe(
 );
 
 
-#----------------------------recipeBook-----------------------------
-
-# -- Register from Auth
-insert into auth (webSiteName, password_) values ("molinosModernos","admin100");
-
-
-#---- Register from recipeBook
-
-insert into recipeBook (recipeBookName,performance,descriptionRecipe,idAuth) values ("Amor en un brazo gitano","Rendimiento: 2 Unidades de 1 Libra y 4 Onzas","REVISE LA CALIDAD DE SUS INGREDIENTES, Revise la calidad de sus ingredientes, Verifique que los utensilios a utilizar estén limpios, Lave correctamente sus manos.",1);
 
 
 
-#-- Register from headerProcedureRecipeBook
-insert into headerProcedureRecipeBook (headerProcedure, idRecipeBook) values ("Amor en un brazo Gitano","1");
-
-
-# -- Register from procedureRecipeBook
-insert into procedureRecipeBook (procedureRecipeBookStep, idHeaderProcedureRecipeBook) values ("1. Pesar correctamente la premezcla, los huevos, el aceite y el agua", 1);
-
-
-
-# -- Register from headerIngredient
-insert into headerIngredientRecipeBook (headerName,idRecipeBook) values ("AMOR EN UN BRAZO GITANO",1);
-
-
-# -- Register from ingredientBook
-insert into ingredientRecipeBook (ingredientDatail,percentage, quantityPounds,quantityOunces, idHeaderIngredientRecipeBook) values ("Premezcla de Vainilla Chocolate o Blanco MM","100%","1","-", 1);
-
-
-
-
-#----------------------recipe---------------------------------------------------------------------
-
-
-
-#---- Register from recipeBook
-
-insert into recipe (recipeName,descriptionRecipe,idAuth) values ("baguette","Tiempo de horneado: 30 minutos (depende del tamaño)Temperatura del horno 180 °C / 355 °FUna onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.",1);
-
-
-
-#-- Register from headerProcedureRecipe
-insert into headerProcedureRecipe (headerProcedure, idRecipe) values ("Ingredientes","1");
-
-
-# -- Register from procedureRecipe
-insert into procedureRecipe (procedureRecipeStep, idHeaderProcedureRecipe) values ("1. Pesa muy bien los ingredientes. Amasa todos los ingredientes por 2 minutos y desarrolla el gluten hasta lograr una textura elástica.", 1);
-
-
-
-# -- Register from headerIngredientRecipe
-insert into headerIngredientRecipe (headerName,idRecipe) values ("Ingredientes",1);
-
-
-# -- Register from ingredientBook
-insert into ingredientRecipe (ingredientDatail,percentage, quantityPounds,quantityOunces, idHeaderIngredientRecipe) values ("Harina Espiga Artesana	","100%","2","-", 1);

@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"webSiteName\": \"test8\",\r\n        \"password_\": \"123\"\r\n    }"
+							"raw": "  {\r\n        \"webSiteName\": \"cmiharinaslivescc\",\r\n        \"password_\": \"Admintest2021\"\r\n    }"
 						},
 						"url": {
 							"raw": "localhost/recetarioBackend/controller/auth/auth.controller.php?op=insertar",
@@ -62,7 +62,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"webSiteName\": \"test8\",\r\n        \"password_\": \"123\"\r\n    }\r\n",
+							"raw": "  {\r\n        \"webSiteName\": \"cmiharinaslivescc\",\r\n        \"password_\": \"Admintest2021\"\r\n    }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1255,13 +1255,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzE4NTcsImV4cCI6MzY3NDEzOTM2MDQ5LjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.cwFwwLMk6g87rbtC0XEkFlqQbEm661eugPXj4ZUr2m8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExNDQ1MDksImV4cCI6MzY3NDE0MjA4NzAxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.t3gdMfO635DWDpgavFSlnnsWYuaulsPxUuX1KSIx2Go",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"headerProcedure\": \"Proceso2020\",\r\n        \"idRecipe\": 1\r\n    }",
+									"raw": "  {\r\n        \"headerProcedure\": \"Proceso\",\r\n        \"idRecipe\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2163,13 +2163,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4Nzc3ODAsImV4cCI6MzY3NDEzOTQxOTcyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.NbzIY3ZmeV_xar0KQUsmN_HKyeSKnwyC1ua5Mu53YQs",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExNDQzNTMsImV4cCI6MzY3NDE0MjA4NTQ1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.tR__yRUJqqkEAvdkSwikn_-QqPzBQ2a8MJRTZdAaxW4",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"Baguette 22\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 2\r\n    }",
+									"raw": "  {\r\n        \"recipeName\": \"Baguette\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2210,7 +2210,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"Baguette 3\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 2\r\n    }",
+									"raw": "  {\r\n        \"recipeName\": \"Baguette 3\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2353,7 +2353,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjI0OTAsImV4cCI6MzY3NDEzODg2NjgyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.BEEt8oeEksM8JUNVKgym1gqGRJRGgJI_LOb-JZ1KRqc",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExNDQzNTMsImV4cCI6MzY3NDE0MjA4NTQ1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.tR__yRUJqqkEAvdkSwikn_-QqPzBQ2a8MJRTZdAaxW4",
 										"type": "text"
 									}
 								],
