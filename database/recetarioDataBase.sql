@@ -3,8 +3,6 @@ CREATE DATABASE recetarioDataBase;
 USE recetarioDataBase;
 
 
-
-
 CREATE TABLE auth(
 	idAuth int not null auto_increment,
     webSiteName varchar (255) not null,
