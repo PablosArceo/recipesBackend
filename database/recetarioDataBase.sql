@@ -3,6 +3,8 @@ CREATE DATABASE recetarioDataBase;
 USE recetarioDataBase;
 
 
+
+
 CREATE TABLE auth(
 	idAuth int not null auto_increment,
     webSiteName varchar (255) not null,
@@ -106,8 +108,6 @@ CREATE TABLE ingredientRecipe(
     primary key PK_idIngredient (idIngredient),
 	foreign key  (idHeaderIngredientRecipe) references headerIngredientRecipe(idHeaderIngredientRecipe)
 );
-
-
 
 
 

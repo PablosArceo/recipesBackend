@@ -123,6 +123,30 @@
                         echo "error interno";
                         }
             break;
+
+            case 'getCompleteRecipe':
+                if(recipe::getCompleteRecipe()) {
+                        http_response_code(200);
+                        echo json_encode(recipe::getCompleteRecipe());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data with this auth";
+                        }
+            break;
+
+            case 'getCompleteProcedureRecipe':
+                if(recipe::getCompleteProcedureRecipe()) {
+                        http_response_code(200);
+                        echo json_encode(recipe::getCompleteProcedureRecipe());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data with this auth";
+                        }
+            break;
+
+            
             
 
     }

@@ -62,7 +62,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"webSiteName\": \"cmiharinaslivescc\",\r\n        \"password_\": \"Admintest2021\"\r\n    }\r\n",
+							"raw": "  {\r\n        \"webSiteName\": \"pablo\",\r\n        \"password_\": \"Admintest2021\"\r\n    }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1177,7 +1177,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjEzNjMsImV4cCI6MzY3NDEzODg1NTU1LjAwMDQsImlkQXV0aCI6IjMiLCJ3ZWJTaXRlTmFtZSI6InRlc3Q3In0.XZ60iYyi7oe9haD6CpqXS7VERKJqc-7PMvAEvXvMPNU",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyMjg4OTEsImV4cCI6MzY3NDE0MjkzMDgzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.bJ9Mz22xD73Rye5jwJ4soqne3Iq6M5pZWFgpidim_78",
 										"type": "text"
 									}
 								],
@@ -1232,6 +1232,102 @@
 										{
 											"key": "idRecipeBook",
 											"value": "68"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompleteRecipeBook",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyMjg4OTEsImV4cCI6MzY3NDE0MjkzMDgzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.bJ9Mz22xD73Rye5jwJ4soqne3Iq6M5pZWFgpidim_78",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getCompleteRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompleteProcedure",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyMzQzOTIsImV4cCI6MzY3NDE0Mjk4NTg0LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.lGcw3moLaUS_hrad09jEDqZVQEbdnB-k1o2mbo3lnss",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteProcedureRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getCompleteProcedureRecipeBook"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompleteDescription",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyMzQ0MDksImV4cCI6MzY3NDE0Mjk4NjAxLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InBhYmxvIn0.4H8mNiJ9nebxZtujhEmwUZTb56adAxcrRylCKrxm5aI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteDescriptionRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getCompleteDescriptionRecipeBook"
 										}
 									]
 								}
@@ -2372,6 +2468,70 @@
 										{
 											"key": "op",
 											"value": "getYourRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompleteRecipe",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyMjg4OTEsImV4cCI6MzY3NDE0MjkzMDgzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.bJ9Mz22xD73Rye5jwJ4soqne3Iq6M5pZWFgpidim_78",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=getCompleteRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getCompleteRecipe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompleteProcedure",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzEyMjg4OTEsImV4cCI6MzY3NDE0MjkzMDgzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.bJ9Mz22xD73Rye5jwJ4soqne3Iq6M5pZWFgpidim_78",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=getCompleteProcedureRecipe",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipe",
+										"recipe.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getCompleteProcedureRecipe"
 										}
 									]
 								}

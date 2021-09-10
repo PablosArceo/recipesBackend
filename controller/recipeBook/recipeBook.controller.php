@@ -129,6 +129,42 @@
                         echo "error interno";
                         }
             break;
+
+            case 'getCompleteRecipeBook':
+                if(recipeBook::getCompleteRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(recipeBook::getCompleteRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data with this auth";
+                        }
+            break;
+
+            case 'getCompleteProcedureRecipeBook':
+                if(recipeBook::getCompleteProcedureRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(recipeBook::getCompleteProcedureRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data with this auth";
+                        }
+            break;
+
+            case 'getCompleteDescriptionRecipeBook':
+                if(recipeBook::getCompleteDescriptionRecipeBook()) {
+                        http_response_code(200);
+                        echo json_encode(recipeBook::getCompleteDescriptionRecipeBook());
+                                }
+                else {
+                        http_response_code(400);
+                        echo "no data with this auth";
+                        }
+            break;
+
+            
+
             
 
     }

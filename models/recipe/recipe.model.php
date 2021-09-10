@@ -121,4 +121,60 @@ require_once "../../utils/jwt.php";
                     $resultado = self::globalService($sentQuery, null, TRUE);
                     return self::printData($resultado);
                 }
+
+                public static function getCompleteRecipe()
+                {
+                    $sentQuery = "SELECT he.headerName, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.descriptionRecipe
+                    FROM ingredientRecipe pr
+                    JOIN headerIngredientRecipe he 
+                    ON pr.idHeaderIngredientRecipe =he.idHeaderIngredientRecipe 
+                    JOIN recipe re  
+                    ON re.idRecipe=he.idRecipe
+                    WHERE re.idAuth=";
+                    $resultado = self::globalService($sentQuery, null, TRUE,TRUE);
+                    $datos = [];
+
+                    if ($resultado->num_rows) {
+                        while ($row = $resultado->fetch_assoc()) {
+                            $datos[] = [
+                                'headerName' => $row['headerName'],
+                                'ingredientDatail' => $row['ingredientDatail'],
+                                'percentage' => $row['percentage'],
+                                'quantityPounds' => $row['quantityPounds'],
+                                'quantityOunces' => $row['quantityOunces'],
+                                'descriptionRecipe' => $row['descriptionRecipe']
+                            ];
+                        }
+                        return $datos;
+                    }
+                    return $datos;
+                }
+
+                public static function getCompleteProcedureRecipe()
+                {
+                    $sentQuery = "SELECT he.headerProcedure, pr.procedureRecipeStep
+                    FROM headerProcedureRecipe he
+                    JOIN procedureRecipe pr 
+                    ON he.idHeaderProcedureRecipe =pr.idHeaderProcedureRecipe
+                    JOIN recipe re  
+                    ON re.idRecipe=he.idRecipe
+                    WHERE re.idAuth=";
+                    $resultado = self::globalService($sentQuery, null, TRUE,TRUE);
+                    $datos = [];
+
+                    if ($resultado->num_rows) {
+                        while ($row = $resultado->fetch_assoc()) {
+                            $datos[] = [
+                                'headerProcedure' => $row['headerProcedure'],
+                                'procedureRecipeStep' => $row['procedureRecipeStep']
+                            ];
+                        }
+                        return $datos;
+                    }
+                    return $datos;
+                }
+
+               
+
             }
+            
