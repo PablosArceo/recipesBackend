@@ -100,6 +100,7 @@ require_once "../../utils/jwt.php";
                     JOIN recipeBook re 
                     ON re.idRecipeBook=he.idRecipeBook
                     WHERE idIngredient='{$idIngredient}'";
+                    
                      $result = self::exectQueryOne($query2);
                      $sentQuery = "DELETE FROM ingredientRecipeBook WHERE idIngredient='{$idIngredient}'";
                      return self::globalService($sentQuery, $result, FALSE);

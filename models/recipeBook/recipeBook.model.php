@@ -27,6 +27,10 @@ require_once "../../utils/jwt.php";
                                   'recipeBookName' => $row['recipeBookName'],
                                   'performance' => $row['performance'],
                                   'descriptionRecipe' => $row['descriptionRecipe'],
+                                  'img' => $row['img'],
+                                  'url' => $row['url'],
+                                  'creationDate' => $row['creationDate'],
+                                  'updateDate' => $row['updateDate'],
                                   'idAuth' => $row['idAuth'],
                               ];
                           }
@@ -67,21 +71,21 @@ require_once "../../utils/jwt.php";
   
                   }
 
-                public static function insertRecipeBook($recipeBookName, $performance, $descriptionRecipe, $idAuth)
+                public static function insertRecipeBook($recipeBookName, $performance, $descriptionRecipe, $img,$url, $idAuth)
                 {
-                    $sentQuery = "INSERT INTO recipeBook (recipeBookName,performance,descriptionRecipe,idAuth)
-                    VALUES('" . $recipeBookName . "', '" . $performance . "', '" . $descriptionRecipe . "','" . $idAuth . "')";
+                    $sentQuery = "INSERT INTO recipeBook (recipeBookName,performance,descriptionRecipe,img,url,idAuth)
+                    VALUES('" . $recipeBookName . "', '" . $performance . "', '" . $descriptionRecipe . "','" . $img . "','" . $url . "','" . $idAuth . "')";
                     return self::globalService($sentQuery, $idAuth, FALSE);
                 }
 
-                public static function updateRecipeBook($idRecipeBook, $recipeBookName, $performance, $descriptionRecipe, $idAuth)
+                public static function updateRecipeBook($idRecipeBook, $recipeBookName, $performance, $descriptionRecipe, $img, $url, $idAuth)
                 {
                     $query2 = "SELECT idAuth FROM recipeBook WHERE idRecipeBook='{$idRecipeBook}'";
                     $result = self::exectQueryOne($query2);
 
                     if($result){
                       $sentQuery = "UPDATE recipeBook SET
-                      recipeBookName='" . $recipeBookName . "', performance='" . $performance . "', descriptionRecipe='" . $descriptionRecipe . "', idAuth='" . $idAuth . "' 
+                      recipeBookName='" . $recipeBookName . "', performance='" . $performance . "', descriptionRecipe='" . $descriptionRecipe ."',img='" . $img . "',  url='" . $url . "', idAuth='" . $idAuth . "' 
                       WHERE idRecipeBook=$idRecipeBook";
                       return self::globalService($sentQuery, $idAuth, FALSE);
                     } else {
@@ -122,77 +126,56 @@ require_once "../../utils/jwt.php";
                 }
 
              
-                public static function getCompleteRecipeBook()
+                public static function getCompleteRecipeBook($idRecipeBook)
                 {
-                    $sentQuery = "SELECT he.headerName, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
-                    FROM ingredientRecipeBook pr
-                     JOIN headerIngredientRecipeBook he 
-                    ON pr.idHeaderIngredientRecipeBook =he.idHeaderIngredientRecipeBook 
+                    $query2 = "SELECT idAuth FROM recipeBook WHERE idRecipeBook='{$idRecipeBook}'";
+                    $result = self::exectQueryOne($query2);
+
+                    $sentQuery = "SELECT  re.recipeBookName, re.url, re.img, re.creationDate, re.updateDate, he.headerName, ir.ingredientDatail, ir.percentage, ir.quantityPounds, ir.quantityOunces, 
+                    re.performance, re.descriptionRecipe, pro.headerProcedure, proRe.procedureRecipeBookStep
+
+                    FROM ingredientRecipeBook ir
+                    JOIN headerIngredientRecipeBook he 
+                    ON ir.idHeaderIngredientRecipeBook =he.idHeaderIngredientRecipeBook 
                     JOIN recipeBook re  
                     ON re.idRecipeBook=he.idRecipeBook
-                    WHERE re.idAuth=";
-                    $resultado = self::globalService($sentQuery, null, TRUE,TRUE);
+                    JOIN headerProcedureRecipeBook pro
+                    JOIN  procedureRecipeBook proRe
+                    on pro.idHeaderProcedureRecipeBook=proRe.idHeaderProcedureRecipeBook
+                    WHERE  re.idRecipeBook='{$idRecipeBook}'";
+                    $resultado = self::globalService($sentQuery, $result, FALSE);
                     $datos = [];
 
-                    if ($resultado->num_rows) {
-                        while ($row = $resultado->fetch_assoc()) {
-                            $datos[] = [
-                                'headerName' => $row['headerName'],
-                                'ingredientDatail' => $row['ingredientDatail'],
-                                'percentage' => $row['percentage'],
-                                'quantityPounds' => $row['quantityPounds'],
-                                'quantityOunces' => $row['quantityOunces'],
-                                'performance' => $row['performance'],
-
-                            ];
+                    if($resultado){
+                        if ($resultado->num_rows) {
+                            while ($row = $resultado->fetch_assoc()) {
+                                $datos[] = [
+                                    'recipeBookName' => $row['recipeBookName'],
+                                    'url' => $row['url'],
+                                    'img' => $row['img'],
+                                    'creationDate' => $row['creationDate'],
+                                    'updateDate' => $row['updateDate'],
+                                    'headerName' => $row['headerName'],
+                                    'ingredientDatail' => $row['ingredientDatail'],
+                                    'percentage' => $row['percentage'],
+                                    'quantityPounds' => $row['quantityPounds'],
+                                    'quantityOunces' => $row['quantityOunces'],
+                                    'performance' => $row['performance'],
+                                    'descriptionRecipe' => $row['descriptionRecipe'],
+                                    'headerProcedure' => $row['headerProcedure'],
+                                    'procedureRecipeBookStep' => $row['procedureRecipeBookStep'],
+    
+                                ];
+                            }
+                            return $datos;
                         }
+
+                    }else{
+                        http_response_code(400);
                         return $datos;
+
                     }
-                    return $datos;
-                }
 
-                public static function getCompleteProcedureRecipeBook()
-                {
-                    $sentQuery = "SELECT he.headerProcedure, pr.procedureRecipeBookStep
-                    FROM headerProcedureRecipeBook he
-                    JOIN procedureRecipeBook pr 
-                    ON he.idHeaderProcedureRecipeBook =pr.idHeaderProcedureRecipeBook
-                    JOIN recipeBook re  
-                    ON re.idRecipeBook=he.idRecipeBook
-                    WHERE re.idAuth=";
-                    $resultado = self::globalService($sentQuery, null, TRUE,TRUE);
-                    $datos = [];
-
-                    if ($resultado->num_rows) {
-                        while ($row = $resultado->fetch_assoc()) {
-                            $datos[] = [
-                                'headerProcedure' => $row['headerProcedure'],
-                                'procedureRecipeBookStep' => $row['procedureRecipeBookStep']
-                            ];
-                        }
-                        return $datos;
-                    }
-                    return $datos;
-                }
-
-                public static function getCompleteDescriptionRecipeBook()
-                {
-                    $sentQuery = "select descriptionRecipe from recipeBook  where idAuth=";
-                    $resultado = self::globalService($sentQuery, null, TRUE,TRUE);
-                    $datos = [];
-
-                    if ($resultado->num_rows) {
-                        while ($row = $resultado->fetch_assoc()) {
-                            $datos[] = [
-                                'descriptionRecipe' => $row['descriptionRecipe'],
-                    
-                            ];
-                        }
-                        return $datos;
-                    }
-                    return $datos;
-                }
-
-
-                
+                 
+                } 
             }

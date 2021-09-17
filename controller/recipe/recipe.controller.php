@@ -16,7 +16,7 @@
             if($datos != NULL) {
 
                     
-                    if(Recipe::insertRecipe($datos->recipeName,$datos->descriptionRecipe, $datos->idAuth)) {
+                    if(Recipe::insertRecipe($datos->recipeName,$datos->performance,$datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
                         http_response_code(200);
                         echo "recipe registered";
 
@@ -40,7 +40,7 @@
                     if($datos != NULL) {
                         $idRecipe=$_GET['idRecipe'];
 
-                        if(Recipe::updateRecipe($idRecipe, $datos->recipeName, $datos->descriptionRecipe, $datos->idAuth)) {
+                        if(Recipe::updateRecipe($idRecipe, $datos->recipeName,$datos->performance, $datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
                             http_response_code(200);
                             echo "updated recipe";
 
@@ -124,28 +124,27 @@
                         }
             break;
 
+          
+
             case 'getCompleteRecipe':
-                if(recipe::getCompleteRecipe()) {
-                        http_response_code(200);
-                        echo json_encode(recipe::getCompleteRecipe());
-                                }
+                if(isset($_GET['idRecipe'])) {
+                    $result = json_encode(recipe::getCompleteRecipe($_GET['idRecipe']));
+                    $comprobacion=$result=="[]";
+                    if($comprobacion==1){
+                        http_response_code(400);
+
+                        echo "No recipe  was found with this id";
+                    }
+                    else{
+                        echo $result;
+
+                    }                         
+                }
                 else {
                         http_response_code(400);
-                        echo "no data with this auth";
+                        echo "error interno";
                         }
             break;
-
-            case 'getCompleteProcedureRecipe':
-                if(recipe::getCompleteProcedureRecipe()) {
-                        http_response_code(200);
-                        echo json_encode(recipe::getCompleteProcedureRecipe());
-                                }
-                else {
-                        http_response_code(400);
-                        echo "no data with this auth";
-                        }
-            break;
-
             
             
 

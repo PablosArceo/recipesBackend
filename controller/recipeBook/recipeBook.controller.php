@@ -16,7 +16,7 @@
             $datos = json_decode(file_get_contents('php://input'));
             if($datos != NULL) {
 
-                    $createRecipeBook =recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe, $datos->idAuth);
+                    $createRecipeBook =recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth);
                     if($createRecipeBook) {
                         echo("recipeBook registered");
                         http_response_code(200);
@@ -42,7 +42,7 @@
                     if($datos != NULL) {
                         $idRecipeBook=$_GET['idRecipeBook'];
 
-                        if(recipeBook::updateRecipeBook($idRecipeBook, $datos->recipeBookName, $datos->performance, $datos->descriptionRecipe, $datos->idAuth)) {
+                        if(recipeBook::updateRecipeBook($idRecipeBook, $datos->recipeBookName, $datos->performance, $datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
                             http_response_code(200);
                             echo "updated recipeBook";
 
@@ -82,7 +82,7 @@
               }
               else {
                   http_response_code(405);
-                  echo "internal error AA";
+                  echo "internal error ";
               }
               break;
 
@@ -130,41 +130,25 @@
                         }
             break;
 
+               
             case 'getCompleteRecipeBook':
-                if(recipeBook::getCompleteRecipeBook()) {
-                        http_response_code(200);
-                        echo json_encode(recipeBook::getCompleteRecipeBook());
-                                }
+                if(isset($_GET['idRecipeBook'])) {
+                    $result = json_encode(recipeBook::getCompleteRecipeBook($_GET['idRecipeBook']));
+                    $comprobacion=$result=="[]";
+                    if($comprobacion==1){
+                        http_response_code(400);
+
+                        echo "No recipe book was found with this id";
+                    }
+                    else{
+                        echo $result;
+
+                    }                         
+                }
                 else {
                         http_response_code(400);
-                        echo "no data with this auth";
+                        echo "error interno";
                         }
             break;
-
-            case 'getCompleteProcedureRecipeBook':
-                if(recipeBook::getCompleteProcedureRecipeBook()) {
-                        http_response_code(200);
-                        echo json_encode(recipeBook::getCompleteProcedureRecipeBook());
-                                }
-                else {
-                        http_response_code(400);
-                        echo "no data with this auth";
-                        }
-            break;
-
-            case 'getCompleteDescriptionRecipeBook':
-                if(recipeBook::getCompleteDescriptionRecipeBook()) {
-                        http_response_code(200);
-                        echo json_encode(recipeBook::getCompleteDescriptionRecipeBook());
-                                }
-                else {
-                        http_response_code(400);
-                        echo "no data with this auth";
-                        }
-            break;
-
-            
-
-            
 
     }
