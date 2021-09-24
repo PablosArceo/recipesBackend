@@ -11,8 +11,8 @@ CREATE TABLE auth(
     url varchar(255) not null,
     country varchar(255) not null,
     mark varchar(100) not null,
-    creationDate DATE not null,
-    updateDate DATE,
+    creationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updateDate TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
     primary key PK_idAuth (idAuth)
 );
 #-------------------------------------RECIPEBOOK----------------------------------------------------------------------------
@@ -24,8 +24,8 @@ CREATE TABLE recipeBook(
 	descriptionRecipe varchar(255) not null,
 	img varchar(255) not null,
     url varchar(255) not null,
-    creationDate DATE not null,
-    updateDate DATE,
+    creationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updateDate TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
     idAuth int not null,
     primary key PK_idRecipeBook (idRecipeBook),
 	foreign key  (idAuth) references auth(idAuth)
@@ -74,11 +74,12 @@ CREATE TABLE ingredientRecipeBook(
 CREATE TABLE recipe(
 	idRecipe int not null auto_increment,
     recipeName varchar(50) not null,
+	performance varchar(255) not null,
 	descriptionRecipe varchar(255) not null,
     img varchar(255) not null,
     url varchar(255) not null,
-    creationDate DATE not null,
-    updateDate DATE,
+    creationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updateDate TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
     idAuth int not null,
     primary key PK_idRecipe (idRecipe),
 	foreign key  (idAuth) references auth(idAuth)
@@ -121,7 +122,6 @@ CREATE TABLE ingredientRecipe(
     primary key PK_idIngredient (idIngredient),
 	foreign key  (idHeaderIngredientRecipe) references headerIngredientRecipe(idHeaderIngredientRecipe)
 );
-
 
 
 
