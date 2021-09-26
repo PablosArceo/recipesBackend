@@ -143,54 +143,80 @@ require_once "../../utils/jwt.php";
                 {
                     $query2 = "SELECT idAuth FROM recipe WHERE idRecipe='{$idRecipe}'";
                     $result = self::exectQueryOne($query2);
-
-                    $sentQuery = "SELECT  re.recipeName, re.url, re.img, re.creationDate, re.updateDate, he.headerName, ir.ingredientDatail, ir.percentage, ir.quantityPounds, ir.quantityOunces, 
-                    re.performance, re.descriptionRecipe, pro.headerProcedure, proRe.procedureRecipeStep
-
-                    FROM ingredientRecipe ir
+            
+                    $sentQuery = "SELECT re.recipeName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
+                    FROM ingredientRecipe pr
                     JOIN headerIngredientRecipe he 
-                    ON ir.idHeaderIngredientRecipe =he.idHeaderIngredientRecipe 
+                    ON pr.idHeaderIngredientRecipe =he.idHeaderIngredientRecipe 
                     JOIN recipe re  
                     ON re.idRecipe=he.idRecipe
-                    JOIN headerProcedureRecipe pro
-                    JOIN  procedureRecipe proRe
-                    on pro.idHeaderProcedureRecipe=proRe.idHeaderProcedureRecipe
-                    WHERE  re.idRecipe='{$idRecipe}'";
+                    WHERE re.idRecipe='{$idRecipe}'";
+            
+                    $sentQuery2 = "SELECT he.headerProcedure, pr.procedureRecipeStep
+                    FROM headerProcedureRecipe he
+                    JOIN procedureRecipe pr 
+                    ON he.idHeaderProcedureRecipe =pr.idHeaderProcedureRecipe
+                    JOIN recipe re  
+                    ON re.idRecipe=he.idRecipe
+                    WHERE re.idRecipe='{$idRecipe}'";
+            
+                    $sentQuery3 = "SELECT descriptionRecipe FROM recipe  WHERE idRecipe='{$idRecipe}'";
+            
                     $resultado = self::globalService($sentQuery, $result, FALSE);
+                    $resultado2 = self::globalService($sentQuery2, $result, FALSE);
+                    $resultado3 = self::globalService($sentQuery3, $result, FALSE);
+            
                     $datos = [];
-
-                    if($resultado){
+            
+                    if ($resultado) {
                         if ($resultado->num_rows) {
                             while ($row = $resultado->fetch_assoc()) {
                                 $datos[] = [
                                     'recipeName' => $row['recipeName'],
-                                    'url' => $row['url'],
+                                    'headerName' => $row['headerName'],
                                     'img' => $row['img'],
+                                    'url' => $row['url'],
                                     'creationDate' => $row['creationDate'],
                                     'updateDate' => $row['updateDate'],
-                                    'headerName' => $row['headerName'],
                                     'ingredientDatail' => $row['ingredientDatail'],
                                     'percentage' => $row['percentage'],
                                     'quantityPounds' => $row['quantityPounds'],
                                     'quantityOunces' => $row['quantityOunces'],
                                     'performance' => $row['performance'],
-                                    'descriptionRecipe' => $row['descriptionRecipe'],
-                                    'headerProcedure' => $row['headerProcedure'],
-                                    'procedureRecipeStep' => $row['procedureRecipeStep'],
-    
+            
                                 ];
                             }
-                            return $datos;
+                            if ($resultado2) {
+                                if ($resultado2->num_rows) {
+                                    while ($row = $resultado2->fetch_assoc()) {
+                                        $datos[] = [
+                                            'headerProcedure' => $row['headerProcedure'],
+                                            'procedureRecipeStep' => $row['procedureRecipeStep'],
+            
+            
+                                        ];
+                                    }
+                                    if ($resultado3) {
+                                        if ($resultado3->num_rows) {
+                                            while ($row = $resultado3->fetch_assoc()) {
+                                                $datos[] = [
+                                                    'descriptionRecipe' => $row['descriptionRecipe'],
+            
+            
+                                                ];
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-
-                    }else{
+            
+                        return $datos;
+                    } else {
                         http_response_code(400);
                         return $datos;
-
                     }
-
-                 
-                } 
+                }
 
                
 
