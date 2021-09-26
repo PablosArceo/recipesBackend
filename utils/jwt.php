@@ -24,7 +24,7 @@ class AuthNew
         );
 
 
-        $arrayToken = array('Token' => JWT::encode($token, self::$secret_key));
+        $arrayToken = array('token' => JWT::encode($token, self::$secret_key));
         return json_encode($arrayToken);
 
 
