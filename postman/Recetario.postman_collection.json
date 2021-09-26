@@ -1431,12 +1431,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2NzgxNDUsImV4cCI6MzY3NDE1NzQyMzM3LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.P7XLoXVouSVQEwLYOIBHYgmYSVoP_KfDsX46RFxsgmA",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook&idRecipeBook=3",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook&idRecipeBook=2",
 									"host": [
 										"localhost"
 									],
@@ -1453,7 +1453,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "3"
+											"value": "2"
 										}
 									]
 								}
@@ -2584,7 +2584,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2ODA0MjYsImV4cCI6MzY3NDE1NzQ0NjE4LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.Gf0SIaKjm9osCOX2F1KcRCsZCtIRednn23UzYN1fL5o",
 										"type": "text"
 									}
 								],
