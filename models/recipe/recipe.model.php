@@ -74,24 +74,34 @@ require_once "../../utils/jwt.php";
 
                 public static function insertRecipe($recipeName,$performance, $descriptionRecipe,$img,$url, $idAuth)
                 {
-                    $sentQuery = "INSERT INTO recipe (recipeName,descriptionRecipe,performance,img,url,idAuth)
-                    VALUES('" . $recipeName . "','" . $performance . "', '" . $descriptionRecipe . "','" . $img . "','" . $url . "','" . $idAuth . "')";
-                    return self::globalService($sentQuery, $idAuth, FALSE);
+                    if(($recipeName && $performance && $descriptionRecipe && $img && $url && $idAuth)){ 
+                        $sentQuery = "INSERT INTO recipe (recipeName,descriptionRecipe,performance,img,url,idAuth)
+                        VALUES('" . $recipeName . "','" . $performance . "', '" . $descriptionRecipe . "','" . $img . "','" . $url . "','" . $idAuth . "')";
+                        return self::globalService($sentQuery, $idAuth, FALSE);
+                    }
+                    else {
+                        return false;
+                    }
+                   
                 }
 
 
                 public static function updateRecipe($idRecipe, $recipeName,$performance, $descriptionRecipe,$img,$url, $idAuth)
                 {
+                    if(($idRecipe && $recipeName && $performance && $descriptionRecipe && $img && $url && $idAuth)){ 
+
                     $query2 = "SELECT idAuth FROM recipe WHERE idRecipe='{$idRecipe}'";
                     $result = self::exectQueryOne($query2);
 
                     if($result){
+
                       $sentQuery = "UPDATE recipe SET
                       recipeName='" . $recipeName . "',  performance='" . $performance .  "', descriptionRecipe='" . $descriptionRecipe .   "', img='" . $img .  "',url='" . $url .  "', idAuth='" . $idAuth . "' 
                       WHERE idRecipe=$idRecipe";
                       return self::globalService($sentQuery, $idAuth, FALSE);
                     } else {
                       return FALSE;
+                    }
                     }
                  }
 
@@ -121,7 +131,7 @@ require_once "../../utils/jwt.php";
                 }
 
                 public static function byIdRecipe($idRecipe): array
-                {
+                {   
                     $sentQuery = "SELECT *FROM recipe WHERE idRecipe=$idRecipe";
                     $resultado = self::globalService($sentQuery, null, TRUE);
                     return self::printData($resultado);

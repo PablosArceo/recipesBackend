@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"webSiteName\": \"test2020\",\r\n        \"password_\": \"Admintest2021\",\r\n        \"img\": \"https://www.labicok.com/wp-content/uploads/2020/06/default-user-image.png\",\r\n        \"url\": \"https://cmiharinaslivescc.sana-cloud.net/recetario\",\r\n        \"country\": \"Guatemala\",\r\n        \"mark\": \"Molinos Modernos\"\r\n    }",
+							"raw": "  {\r\n        \"webSiteName\": \"jose\",\r\n        \"password_\": \"Admintest2021\",\r\n        \"img\": \"https://www.labicok.com/wp-content/uploads/2020/06/default-user-image.png\",\r\n        \"url\": \"https://cmiharinaslivescc.sana-cloud.net/recetario\",\r\n        \"country\": \"Guatemala\",\r\n        \"mark\": \"Molinos Modernos\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -102,13 +102,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzE0Nzg0OTIsImV4cCI6MzY3NDE0NTQyNjg0LjAwMDQsImlkQXV0aCI6IjE0Iiwid2ViU2l0ZU5hbWUiOiJwYWJsbyJ9.396VTWqMX0e77H1K-mLtFx9U6h1CDAPfJCCpGUBukt0",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"webSiteName\": \"ccMolinos\",\r\n        \"img\": \"https://www.labicok.com/wp-content/uploads/2020/06/default-user-image.png\",\r\n        \"url\": \"https://cmiharinaslivescc.sana-cloud.net/recetario\",\r\n        \"country\": \"Guatemala\",\r\n        \"mark\": \"Molinos Modernos\"\r\n    }",
+							"raw": "  {\r\n        \"webSiteName\": \"cmiharinaslivescc\",\r\n        \"img\": \"https://www.labicok.com/wp-content/uploads/2020/06/default-user-image.png\",\r\n        \"url\": \"https://cmiharinaslivescc.sana-cloud.net/recetario\",\r\n        \"country\": \"Guatemala\",\r\n        \"mark\": \"Molinos Modernos\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -116,7 +116,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost/recetarioBackend/controller/auth/auth.controller.php?op=updateAuth&idAuth=14",
+							"raw": "localhost/recetarioBackend/controller/auth/auth.controller.php?op=updateAuth&idAuth=1",
 							"host": [
 								"localhost"
 							],
@@ -133,7 +133,7 @@
 								},
 								{
 									"key": "idAuth",
-									"value": "14"
+									"value": "1"
 								}
 							]
 						}
@@ -518,13 +518,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MTY0OTAsImV4cCI6MzY3NDEzODgwNjgyLjAwMDQsImlkQXV0aCI6IjMiLCJ3ZWJTaXRlTmFtZSI6InRlc3Q3In0.tRHgt5-gXlBGKhQ2yUFfmU9JoFaM61o7tt3nP69_J0U",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2Mjg5OTQsImV4cCI6MzY3NDE1NjkzMTg2LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.LnqE_RN8hBoNyGgn512KiEdP2RZffW-0icf_H_Jcpo0",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"procedureRecipeBookStep\": \"blabl////\",\r\n        \"idHeaderProcedureRecipeBook\": 5\r\n    }",
+									"raw": "  {\r\n        \"procedureRecipeBookStep\": \"bla///\",\r\n        \"idHeaderProcedureRecipeBook\": 3\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -573,7 +573,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=updateProcedureRecipeBook&idProcedureRecipeBook=1",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=updateProcedureRecipeBook&idProcedureRecipeBook=61",
 									"host": [
 										"localhost"
 									],
@@ -590,7 +590,7 @@
 										},
 										{
 											"key": "idProcedureRecipeBook",
-											"value": "1"
+											"value": "61"
 										}
 									]
 								}
@@ -604,12 +604,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MTE5NTEsImV4cCI6MzY3NDEzODc2MTQzLjAwMDQsImlkQXV0aCI6IjMiLCJ3ZWJTaXRlTmFtZSI6InRlc3Q3In0.o1WmAKFOqtxVOJ1iuOtmRh7qQD-oG3zQwPjpPIwd5GI",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzAyOTMsImV4cCI6MzY3NDE1Njk0NDg1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.2f58lW4QOn-BDkyBdTqtTo9mps_DQtXGAYm_QQQ60mo",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=deleteProcedureRecipeBook&idProcedureRecipeBook=45",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/procedureRecipeBook.controller.php?op=deleteProcedureRecipeBook&idProcedureRecipeBook=61",
 									"host": [
 										"localhost"
 									],
@@ -626,7 +626,7 @@
 										},
 										{
 											"key": "idProcedureRecipeBook",
-											"value": "45"
+											"value": "61"
 										}
 									]
 								}
@@ -640,7 +640,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MDk1ODgsImV4cCI6MzY3NDEzODczNzgwLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4IiwicGFzd29yZF8iOiIxMjMifQ.fcTWtQnPI7YENE5Fhm99U27UMOzWN49zgdmeJHzTX8Q",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzAyOTMsImV4cCI6MzY3NDE1Njk0NDg1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.2f58lW4QOn-BDkyBdTqtTo9mps_DQtXGAYm_QQQ60mo",
 										"type": "text"
 									}
 								],
@@ -672,7 +672,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MTY0OTAsImV4cCI6MzY3NDEzODgwNjgyLjAwMDQsImlkQXV0aCI6IjMiLCJ3ZWJTaXRlTmFtZSI6InRlc3Q3In0.tRHgt5-gXlBGKhQ2yUFfmU9JoFaM61o7tt3nP69_J0U",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzAyOTMsImV4cCI6MzY3NDE1Njk0NDg1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.2f58lW4QOn-BDkyBdTqtTo9mps_DQtXGAYm_QQQ60mo",
 										"type": "text"
 									}
 								],
@@ -704,7 +704,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MDk1ODgsImV4cCI6MzY3NDEzODczNzgwLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4IiwicGFzd29yZF8iOiIxMjMifQ.fcTWtQnPI7YENE5Fhm99U27UMOzWN49zgdmeJHzTX8Q",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzAyOTMsImV4cCI6MzY3NDE1Njk0NDg1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.2f58lW4QOn-BDkyBdTqtTo9mps_DQtXGAYm_QQQ60mo",
 										"type": "text"
 									}
 								],
@@ -745,13 +745,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzY5NDIsImV4cCI6MzY3NDEzOTQxMTM0LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.arAcbozvIJZAqo-webYDRXE483bPe559bVXISKsNTs8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzA2NTgsImV4cCI6MzY3NDE1Njk0ODUwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.37r3YYOfBxgtFxT4NdYbivez9isNepuW3_X3w4hqUUY",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"headerName\": \"PASTA CIGARRETE 2020\",\r\n        \"idRecipeBook\": 82\r\n    }",
+									"raw": "  {\r\n        \"headerName\": \"PASTA CIGARRETE 2020\",\r\n        \"idRecipeBook\": 2\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -786,7 +786,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzY2OTksImV4cCI6MzY3NDEzOTQwODkxLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.i1Fy-YkkXaqae_xggXthHltRO6Ry3j6STqC4RNqz49k",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzA2NTgsImV4cCI6MzY3NDE1Njk0ODUwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.37r3YYOfBxgtFxT4NdYbivez9isNepuW3_X3w4hqUUY",
 										"type": "text"
 									}
 								],
@@ -800,7 +800,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=updateHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=5",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=updateHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=6",
 									"host": [
 										"localhost"
 									],
@@ -817,7 +817,7 @@
 										},
 										{
 											"key": "idHeaderIngredientRecipeBook",
-											"value": "5"
+											"value": "6"
 										}
 									]
 								}
@@ -831,12 +831,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzY2OTksImV4cCI6MzY3NDEzOTQwODkxLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.i1Fy-YkkXaqae_xggXthHltRO6Ry3j6STqC4RNqz49k",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzA2NTgsImV4cCI6MzY3NDE1Njk0ODUwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.37r3YYOfBxgtFxT4NdYbivez9isNepuW3_X3w4hqUUY",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=deleteHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=7",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=deleteHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=6",
 									"host": [
 										"localhost"
 									],
@@ -853,7 +853,7 @@
 										},
 										{
 											"key": "idHeaderIngredientRecipeBook",
-											"value": "7"
+											"value": "6"
 										}
 									]
 								}
@@ -867,7 +867,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzY2OTksImV4cCI6MzY3NDEzOTQwODkxLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.i1Fy-YkkXaqae_xggXthHltRO6Ry3j6STqC4RNqz49k",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzA2NTgsImV4cCI6MzY3NDE1Njk0ODUwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.37r3YYOfBxgtFxT4NdYbivez9isNepuW3_X3w4hqUUY",
 										"type": "text"
 									}
 								],
@@ -899,7 +899,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzY5NDIsImV4cCI6MzY3NDEzOTQxMTM0LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.arAcbozvIJZAqo-webYDRXE483bPe559bVXISKsNTs8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzA2NTgsImV4cCI6MzY3NDE1Njk0ODUwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.37r3YYOfBxgtFxT4NdYbivez9isNepuW3_X3w4hqUUY",
 										"type": "text"
 									}
 								],
@@ -931,12 +931,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzY2OTksImV4cCI6MzY3NDEzOTQwODkxLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.i1Fy-YkkXaqae_xggXthHltRO6Ry3j6STqC4RNqz49k",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MzA2NTgsImV4cCI6MzY3NDE1Njk0ODUwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.37r3YYOfBxgtFxT4NdYbivez9isNepuW3_X3w4hqUUY",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=byIdHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=5",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/headerIngreRecipeBook.controller.php?op=byIdHeaderIngreRecipeBook&idHeaderIngredientRecipeBook=4",
 									"host": [
 										"localhost"
 									],
@@ -953,7 +953,7 @@
 										},
 										{
 											"key": "idHeaderIngredientRecipeBook",
-											"value": "5"
+											"value": "4"
 										}
 									]
 								}
@@ -978,7 +978,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"ingredientDatail\": \"Huevo test\",\r\n        \"percentage\": \"75%\",\r\n        \"quantityPounds\": \"-\",\r\n        \"quantityOunces\": \"12.00\",\r\n        \"idHeaderIngredientRecipeBook\": 5\r\n       \r\n\r\n    }",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Huevo test\",\r\n        \"percentage\": \"75%\",\r\n        \"quantityPounds\": \"-\",\r\n        \"quantityOunces\": \"12.00\",\r\n        \"idHeaderIngredientRecipeBook\": 3\r\n       \r\n\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1027,7 +1027,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=updateIngreRecipeBook&idIngredient=1",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=updateIngreRecipeBook&idIngredient=20",
 									"host": [
 										"localhost"
 									],
@@ -1044,7 +1044,7 @@
 										},
 										{
 											"key": "idIngredient",
-											"value": "1"
+											"value": "20"
 										}
 									]
 								}
@@ -1058,12 +1058,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NjYyMDIsImV4cCI6MzY3NDEzOTMwMzk0LjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.S949jHlCozatZJ3qakMabU5D7eLotxTd5YC07pn9hjA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2Mjk4NDcsImV4cCI6MzY3NDE1Njk0MDM5LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.jLB3BwAgtqecvoD37x9Imn6xNLyoc0HNSPgxSl-AzJM",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=deleteIngreRecipeBook&idIngredient=1",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/ingreRecipeBook.controller.php?op=deleteIngreRecipeBook&idIngredient=20",
 									"host": [
 										"localhost"
 									],
@@ -1080,7 +1080,7 @@
 										},
 										{
 											"key": "idIngredient",
-											"value": "1"
+											"value": "20"
 										}
 									]
 								}
@@ -1126,7 +1126,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NjYyNDksImV4cCI6MzY3NDEzOTMwNDQxLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.vKnHqcZn36mJymFe0ZQQc3Pskm9-NWLV6bfT3NuDHxE",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2Mjk4NDcsImV4cCI6MzY3NDE1Njk0MDM5LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.jLB3BwAgtqecvoD37x9Imn6xNLyoc0HNSPgxSl-AzJM",
 										"type": "text"
 									}
 								],
@@ -1158,7 +1158,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NjYyNDksImV4cCI6MzY3NDEzOTMwNDQxLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.vKnHqcZn36mJymFe0ZQQc3Pskm9-NWLV6bfT3NuDHxE",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2Mjk4NDcsImV4cCI6MzY3NDE1Njk0MDM5LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.jLB3BwAgtqecvoD37x9Imn6xNLyoc0HNSPgxSl-AzJM",
 										"type": "text"
 									}
 								],
@@ -1215,7 +1215,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeBookName\": \"Corn Dog\",\r\n        \"performance\": \"Rendimiento: 50 Unidades de 1 Libra\",\r\n        \"descriptionRecipe\": \"Revise la calidad de sus ingredientes Verifique que los utensilios a utilizar estén limpios .Lave correctamente sus manos.\",\r\n        \"img\": \"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetario/portada-recetario/corn-dog.jpg\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeBookName\": \"Corn Dog\",\r\n        \"performance\": \"New\",\r\n        \"descriptionRecipe\": \"Revise la calidad de sus ingredientes Verifique que los utensilios a utilizar estén limpios .Lave correctamente sus manos.\",\r\n        \"img\": \"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetario/portada-recetario/corn-dog.jpg\",\r\n        \"url\": \"$datos->url\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1264,7 +1264,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=1",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=7",
 									"host": [
 										"localhost"
 									],
@@ -1281,7 +1281,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "1"
+											"value": "7"
 										}
 									]
 								}
@@ -1295,12 +1295,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjAyOTYsImV4cCI6MzY3NDEzODg0NDg4LjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.LLamGsxjrlRx0pUSzx_gRV4CNsQt3xrczCNbi-McuPc",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=79",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=7",
 									"host": [
 										"localhost"
 									],
@@ -1317,7 +1317,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "79"
+											"value": "7"
 										}
 									]
 								}
@@ -1400,7 +1400,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getbyIdRecipeBook&idRecipeBook=68",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getbyIdRecipeBook&idRecipeBook=1",
 									"host": [
 										"localhost"
 									],
@@ -1417,7 +1417,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "68"
+											"value": "1"
 										}
 									]
 								}
@@ -1532,7 +1532,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=updateHeaderProRecipe&idHeaderProcedureRecipe=6",
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=updateHeaderProRecipe&idHeaderProcedureRecipe=4",
 									"host": [
 										"localhost"
 									],
@@ -1549,7 +1549,7 @@
 										},
 										{
 											"key": "idHeaderProcedureRecipe",
-											"value": "6"
+											"value": "4"
 										}
 									]
 								}
@@ -1563,12 +1563,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzE4NTcsImV4cCI6MzY3NDEzOTM2MDQ5LjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.cwFwwLMk6g87rbtC0XEkFlqQbEm661eugPXj4ZUr2m8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=deleteHeaderProRecipe&idHeaderProcedureRecipe=8",
+									"raw": "localhost/recetarioBackend/controller/recipe/headerProRecipe.controller.php?op=deleteHeaderProRecipe&idHeaderProcedureRecipe=4",
 									"host": [
 										"localhost"
 									],
@@ -1585,7 +1585,7 @@
 										},
 										{
 											"key": "idHeaderProcedureRecipe",
-											"value": "8"
+											"value": "4"
 										}
 									]
 								}
@@ -1599,7 +1599,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzE4NTcsImV4cCI6MzY3NDEzOTM2MDQ5LjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.cwFwwLMk6g87rbtC0XEkFlqQbEm661eugPXj4ZUr2m8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
@@ -1631,7 +1631,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NzE4NTcsImV4cCI6MzY3NDEzOTM2MDQ5LjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.cwFwwLMk6g87rbtC0XEkFlqQbEm661eugPXj4ZUr2m8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
@@ -1710,7 +1710,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"procedureRecipeStep\": \"1.Pesa m\",\r\n        \"idHeaderProcedureRecipe\": 7\r\n    }",
+									"raw": "  {\r\n        \"procedureRecipeStep\": \"1.Pesa m\",\r\n        \"idHeaderProcedureRecipe\": 2\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1751,7 +1751,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"procedureRecipeStep\": \"2.Ponla a reposar durante 5 minutos..\",\r\n        \"idHeaderProcedureRecipe\": 7\r\n        \r\n    }",
+									"raw": "  {\r\n        \"procedureRecipeStep\": \"2.Ponla a reposar durante 5 minutos..\",\r\n        \"idHeaderProcedureRecipe\": 3\r\n        \r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1759,7 +1759,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=updateProcedureRecipe&idProcedureRecipe=10",
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=updateProcedureRecipe&idProcedureRecipe=18",
 									"host": [
 										"localhost"
 									],
@@ -1776,7 +1776,7 @@
 										},
 										{
 											"key": "idProcedureRecipe",
-											"value": "10"
+											"value": "18"
 										}
 									]
 								}
@@ -1790,12 +1790,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjM5NjksImV4cCI6MzY3NDEzODg4MTYxLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.haQEaoyKe2b5YVwWiu9XTOpPPJ-klbU5jFbl4zlNYps",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=deleteProcedureRecipe&idProcedureRecipe=10",
+									"raw": "localhost/recetarioBackend/controller/recipe/procedureRecipe.controller.php?op=deleteProcedureRecipe&idProcedureRecipe=18",
 									"host": [
 										"localhost"
 									],
@@ -1812,7 +1812,7 @@
 										},
 										{
 											"key": "idProcedureRecipe",
-											"value": "10"
+											"value": "18"
 										}
 									]
 								}
@@ -1858,7 +1858,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjM5NjksImV4cCI6MzY3NDEzODg4MTYxLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.haQEaoyKe2b5YVwWiu9XTOpPPJ-klbU5jFbl4zlNYps",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
@@ -1937,7 +1937,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"headerName\": \"(Masa madre 10-30%)\",\r\n        \"idRecipe\": 13\r\n    }",
+									"raw": "  {\r\n        \"headerName\": \"(Masa madre 10-30%)\",\r\n        \"idRecipe\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1978,7 +1978,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"headerName\": \"(Masa madre 10-)\",\r\n        \"idRecipe\": 1\r\n    }",
+									"raw": "  {\r\n        \"headerName\": \"Masa madre\",\r\n        \"idRecipe\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1986,7 +1986,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=updateHeaderIngreRecipe&idHeaderIngredientRecipe=4",
+									"raw": "localhost/recetarioBackend/controller/recipe/headerIngreRecipe.controller.php?op=updateHeaderIngreRecipe&idHeaderIngredientRecipe=9",
 									"host": [
 										"localhost"
 									],
@@ -2003,7 +2003,7 @@
 										},
 										{
 											"key": "idHeaderIngredientRecipe",
-											"value": "4"
+											"value": "9"
 										}
 									]
 								}
@@ -2017,7 +2017,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4Nzc3ODAsImV4cCI6MzY3NDEzOTQxOTcyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.NbzIY3ZmeV_xar0KQUsmN_HKyeSKnwyC1ua5Mu53YQs",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjgzMzEsImV4cCI6MzY3NDE1NjkyNTIzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.e4HHvUodDqRfewYjUozXqo5pZ2sWKQ4TKLFikh4d18I",
 										"type": "text"
 									}
 								],
@@ -2053,7 +2053,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4Nzc3ODAsImV4cCI6MzY3NDEzOTQxOTcyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.NbzIY3ZmeV_xar0KQUsmN_HKyeSKnwyC1ua5Mu53YQs",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjgzMzEsImV4cCI6MzY3NDE1NjkyNTIzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.e4HHvUodDqRfewYjUozXqo5pZ2sWKQ4TKLFikh4d18I",
 										"type": "text"
 									}
 								],
@@ -2085,7 +2085,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4Nzc3ODAsImV4cCI6MzY3NDEzOTQxOTcyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.NbzIY3ZmeV_xar0KQUsmN_HKyeSKnwyC1ua5Mu53YQs",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjgzMzEsImV4cCI6MzY3NDE1NjkyNTIzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.e4HHvUodDqRfewYjUozXqo5pZ2sWKQ4TKLFikh4d18I",
 										"type": "text"
 									}
 								],
@@ -2117,7 +2117,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4Nzc3ODAsImV4cCI6MzY3NDEzOTQxOTcyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.NbzIY3ZmeV_xar0KQUsmN_HKyeSKnwyC1ua5Mu53YQs",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjgzMzEsImV4cCI6MzY3NDE1NjkyNTIzLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.e4HHvUodDqRfewYjUozXqo5pZ2sWKQ4TKLFikh4d18I",
 										"type": "text"
 									}
 								],
@@ -2158,7 +2158,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NjY5NjAsImV4cCI6MzY3NDEzOTMxMTUyLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.nQTrRlgsH-kPyoyfJ1NDJLVHLLhwgWnw3O6BuYszOD8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
@@ -2205,7 +2205,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"ingredientDatail\": \"Agua fría w\",\r\n        \"percentage\": \"100%\",\r\n        \"quantityPounds\": \"2\",\r\n        \"quantityOunces\": \"-\",\r\n        \"idHeaderIngredientRecipe\": 1\r\n       \r\n\r\n    }",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Agua fría w\",\r\n        \"percentage\": \"100%\",\r\n        \"quantityPounds\": \"2\",\r\n        \"quantityOunces\": \"-\",\r\n        \"idHeaderIngredientRecipe\": 4\r\n       \r\n\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2213,7 +2213,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=updateIngreRecipe&idIngredient=2",
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=updateIngreRecipe&idIngredient=21",
 									"host": [
 										"localhost"
 									],
@@ -2230,7 +2230,7 @@
 										},
 										{
 											"key": "idIngredient",
-											"value": "2"
+											"value": "21"
 										}
 									]
 								}
@@ -2244,12 +2244,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NjY5NjAsImV4cCI6MzY3NDEzOTMxMTUyLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.nQTrRlgsH-kPyoyfJ1NDJLVHLLhwgWnw3O6BuYszOD8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=deleteIngreRecipe&idIngredient=10",
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=deleteIngreRecipe&idIngredient=20",
 									"host": [
 										"localhost"
 									],
@@ -2266,7 +2266,7 @@
 										},
 										{
 											"key": "idIngredient",
-											"value": "10"
+											"value": "20"
 										}
 									]
 								}
@@ -2312,7 +2312,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4NjY5NjAsImV4cCI6MzY3NDEzOTMxMTUyLjAwMDQsImlkQXV0aCI6IjciLCJ3ZWJTaXRlTmFtZSI6InRlc3Q4In0.nQTrRlgsH-kPyoyfJ1NDJLVHLLhwgWnw3O6BuYszOD8",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
@@ -2385,13 +2385,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExNDQzNTMsImV4cCI6MzY3NDE0MjA4NTQ1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.tR__yRUJqqkEAvdkSwikn_-QqPzBQ2a8MJRTZdAaxW4",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI1NDA4NjIsImV4cCI6MzY3NDE1NjA1MDU0LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InBhYmxvIn0.M5cFBwKwtVKK-GFr_Vp4-Vs5p6nb98UGVeDN-qu_qng",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"Receta Panqueques\",\r\n        \"performance\":\"20 Unidades\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetas/portadas/receta-2.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/boletines/receta-hotcake-mix-inhsa.pdf\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeName\": \"test \",\r\n        \"performance\":\"20 Unidades\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetas/portadas/receta-2.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/boletines/receta-hotcake-mix-inhsa.pdf\",\r\n        \"idAuth\": 2\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2426,13 +2426,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjIxMDAsImV4cCI6MzY3NDE1Njg2MjkyLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.lOPzYNPNBRGBogXo18Ky74prGU9-TGw6KTp3x3xFPpw",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"Baguette\",\r\n        \"performance\":\"\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/pan_caliente/banner_receta/banner-baguette.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/pan_caliente_baguette\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeName\":\"Baguette\",\r\n        \"performance\":\"Rendimientos:\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/pan_caliente/banner_receta/banner-baguette.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/pan_caliente_baguette\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2471,12 +2471,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjI0OTAsImV4cCI6MzY3NDEzODg2NjgyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.BEEt8oeEksM8JUNVKgym1gqGRJRGgJI_LOb-JZ1KRqc",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=10",
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=9",
 									"host": [
 										"localhost"
 									],
@@ -2493,7 +2493,7 @@
 										},
 										{
 											"key": "idRecipe",
-											"value": "10"
+											"value": "9"
 										}
 									]
 								}
@@ -2503,16 +2503,25 @@
 						{
 							"name": "Get by IdRecipe",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4MjI0OTAsImV4cCI6MzY3NDEzODg2NjgyLjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InRlc3QxIn0.BEEt8oeEksM8JUNVKgym1gqGRJRGgJI_LOb-JZ1KRqc",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI1NDA4NjIsImV4cCI6MzY3NDE1NjA1MDU0LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InBhYmxvIn0.M5cFBwKwtVKK-GFr_Vp4-Vs5p6nb98UGVeDN-qu_qng",
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"headerProcedure\": \"Proceso\",\r\n        \"idRecipe\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=byIdRecipe&idRecipe=1",
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=byIdRecipe&idRecipe=2",
 									"host": [
 										"localhost"
 									],
@@ -2529,7 +2538,7 @@
 										},
 										{
 											"key": "idRecipe",
-											"value": "1"
+											"value": "2"
 										}
 									]
 								}
@@ -2543,7 +2552,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzExNDQzNTMsImV4cCI6MzY3NDE0MjA4NTQ1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.tR__yRUJqqkEAvdkSwikn_-QqPzBQ2a8MJRTZdAaxW4",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI1NDA4NjIsImV4cCI6MzY3NDE1NjA1MDU0LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InBhYmxvIn0.M5cFBwKwtVKK-GFr_Vp4-Vs5p6nb98UGVeDN-qu_qng",
 										"type": "text"
 									}
 								],
@@ -2575,12 +2584,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=getCompleteRecipe&idRecipe=2",
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=getCompleteRecipe&idRecipe=1",
 									"host": [
 										"localhost"
 									],
@@ -2597,7 +2606,7 @@
 										},
 										{
 											"key": "idRecipe",
-											"value": "2"
+											"value": "1"
 										}
 									]
 								}

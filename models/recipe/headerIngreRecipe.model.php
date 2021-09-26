@@ -68,14 +68,22 @@ require_once "../../utils/jwt.php";
 
                 public static function insertHeaderIngreRecipe($headerName, $idRecipe)
                 {
+                    if(($headerName && $idRecipe )){ 
+
                     $sentQuery = "INSERT INTO headerIngredientRecipe (headerName,idRecipe)
                     VALUES('".$headerName."', '".$idRecipe."')";
                     return self::globalService($sentQuery, $idRecipe, TRUE); 
+                }
+                     else{
+                     return FALSE;
+                }
                 }
 
 
                 public static function updateHeaderIngreRecipe($idHeaderIngredientRecipe, $headerName, $idRecipe)
                 {
+                    if(($headerName && $idRecipe )){ 
+
                     $query2 = "SELECT idRecipe FROM headerIngredientRecipe WHERE idHeaderIngredientRecipe='{$idHeaderIngredientRecipe}'";
                     $result = self::exectQueryOne($query2);
 
@@ -87,6 +95,7 @@ require_once "../../utils/jwt.php";
                     } else {
                       return FALSE;
                     }
+                }
                  }
        
 

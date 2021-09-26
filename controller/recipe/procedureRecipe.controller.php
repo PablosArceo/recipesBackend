@@ -22,7 +22,7 @@ switch ($_GET['op']) {
                 echo "ProcedureRecipe registered";
             } else {
                 http_response_code(400);
-                echo "ProcedureRecipe no registered, complete all data correctly";
+                echo "ProcedureRecipe no registered, fill in all the fields o check the id entered";
             }
         } else {
             http_response_code(405);
@@ -45,7 +45,7 @@ switch ($_GET['op']) {
                 echo "updated ProcedureRecipe";
             } else {
                 http_response_code(400);
-                echo "no updated ProcedureRecipe, check the changes o the id entered";
+                echo "no updated ProcedureRecipe, fill in all the fields o check the id entered";
             }
         } else {
             http_response_code(405);
@@ -101,6 +101,8 @@ switch ($_GET['op']) {
             $result = json_encode(procedureRecipe::byIdProcedureRecipe($_GET['idProcedureRecipe']));
             $comprobacion = $result == "[]";
             if ($comprobacion == 1) {
+                http_response_code(400);
+
                 echo "No ProcedureRecipe  was found with this id";
             } else {
                 echo $result;

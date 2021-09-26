@@ -70,14 +70,22 @@ require_once "../../utils/jwt.php";
 
                 public static function insertIngredientRecipeBook($ingredientDatail,$percentage,$quantityPounds,$quantityOunces,$idHeaderIngredientRecipeBook)
                 {
+                    if(($ingredientDatail && $percentage && $quantityPounds && $quantityOunces && $idHeaderIngredientRecipeBook )){ 
+
                     $sentQuery = "INSERT INTO ingredientRecipeBook (ingredientDatail,percentage,quantityPounds,quantityOunces,idHeaderIngredientRecipeBook)
                     VALUES('".$ingredientDatail."','".$percentage."','".$quantityPounds."','".$quantityOunces."',$idHeaderIngredientRecipeBook)";
                     return self::globalService($sentQuery, $idHeaderIngredientRecipeBook, TRUE); 
+                }
+                else{
+                return FALSE;
+                }
                 }
 
                 public static function updateIngredientRecipeBook($idIngredient, $ingredientDatail, $percentage, $quantityPounds,$quantityOunces,
                 $idHeaderIngredientRecipeBook)
                 {
+                    if(($ingredientDatail && $percentage && $quantityPounds && $quantityOunces && $idHeaderIngredientRecipeBook )){ 
+
                     $query2 = "SELECT idHeaderIngredientRecipeBook FROM ingredientRecipeBook WHERE idIngredient='{$idIngredient}'";
                     $result = self::exectQueryOne($query2);
 
@@ -90,6 +98,7 @@ require_once "../../utils/jwt.php";
                     } else {
                       return FALSE;
                     }
+                }
                  }
        
                  public static function deleteIngredientRecipeBook($idIngredient)

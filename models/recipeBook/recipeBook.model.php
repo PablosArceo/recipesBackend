@@ -73,13 +73,20 @@ require_once "../../utils/jwt.php";
 
                 public static function insertRecipeBook($recipeBookName, $performance, $descriptionRecipe, $img,$url, $idAuth)
                 {
+                    if(($recipeBookName && $performance && $descriptionRecipe && $img && $url && $idAuth)){ 
+
                     $sentQuery = "INSERT INTO recipeBook (recipeBookName,performance,descriptionRecipe,img,url,idAuth)
                     VALUES('" . $recipeBookName . "', '" . $performance . "', '" . $descriptionRecipe . "','" . $img . "','" . $url . "','" . $idAuth . "')";
                     return self::globalService($sentQuery, $idAuth, FALSE);
+                    }else {
+                        return false;
+                    }
                 }
 
                 public static function updateRecipeBook($idRecipeBook, $recipeBookName, $performance, $descriptionRecipe, $img, $url, $idAuth)
                 {
+                    if(($recipeBookName && $performance && $descriptionRecipe && $img && $url && $idAuth)){ 
+
                     $query2 = "SELECT idAuth FROM recipeBook WHERE idRecipeBook='{$idRecipeBook}'";
                     $result = self::exectQueryOne($query2);
 
@@ -91,6 +98,7 @@ require_once "../../utils/jwt.php";
                     } else {
                       return FALSE;
                     }
+                }
                  }
 
                 public static function deleteRecipeBook($idRecipeBook)

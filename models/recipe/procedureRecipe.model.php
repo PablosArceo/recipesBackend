@@ -68,14 +68,22 @@ require_once "../../utils/jwt.php";
 
                 public static function insertProcedureRecipe($procedureRecipeStep, $idHeaderProcedureRecipe)
                 {
+                    if(($procedureRecipeStep && $idHeaderProcedureRecipe )){ 
+
                     $sentQuery = "INSERT INTO procedureRecipe (procedureRecipeStep,idHeaderProcedureRecipe)
                     VALUES('".$procedureRecipeStep."', '".$idHeaderProcedureRecipe."')";
                     return self::globalService($sentQuery, $idHeaderProcedureRecipe, TRUE); 
+                    }
+                    else{
+                        return FALSE;
+                    }
                 }
 
 
                 public static function updateProcedureRecipe($idProcedureRecipe, $procedureRecipeStep, $idHeaderProcedureRecipe)
                 {
+                    if(($procedureRecipeStep && $idHeaderProcedureRecipe )){ 
+
                     $query2 = "SELECT idHeaderProcedureRecipe FROM procedureRecipe WHERE idProcedureRecipe='{$idProcedureRecipe}'";
                     $result = self::exectQueryOne($query2);
 
@@ -87,6 +95,7 @@ require_once "../../utils/jwt.php";
                     } else {
                       return FALSE;
                     }
+                }
                  }
        
 

@@ -14,16 +14,17 @@
         case 'insertRecipe':
             $datos = json_decode(file_get_contents('php://input'));
             if($datos != NULL) {
-
+                
                     
-                    if(Recipe::insertRecipe($datos->recipeName,$datos->performance,$datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
+                    if(Recipe::insertRecipe($datos->recipeName,$datos->performance,
+                    $datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
                         http_response_code(200);
                         echo "recipe registered";
 
                     }
                     else {
                         http_response_code(400);
-                        echo "recipe no registered, complete all data correctly" ;
+                        echo "recipe no registered,  fill in all the fields o check the id entered" ;
 
                     }
                 }
@@ -47,7 +48,7 @@
                         }
                         else {
                             http_response_code(400);
-                            echo "no updated recipe, check the changes o the id entered";
+                            echo "no updated recipe, fill in all the fields o check the id entered";
 
                         }
                     }
@@ -113,6 +114,7 @@
                     $result = json_encode(Recipe::byIdRecipe($_GET['idRecipe']));
                     $comprobacion=$result=="[]";
                     if($comprobacion==1){
+                    http_response_code(400);
                     echo "No recipe  was found with this id";
                     }else{
                         echo $result;

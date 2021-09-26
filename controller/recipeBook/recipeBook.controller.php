@@ -15,6 +15,7 @@
         case 'insertRecipeBook':
             $datos = json_decode(file_get_contents('php://input'));
             if($datos != NULL) {
+                
 
                     $createRecipeBook =recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth);
                     if($createRecipeBook) {
@@ -22,7 +23,7 @@
                         http_response_code(200);
                     }
                     else {
-                        echo "recipeBook no registered, complete all data correctly";
+                        echo "recipeBook no registered, fill in all the fields o check the id entered";
                         http_response_code(400);
 
 
@@ -49,7 +50,7 @@
                         }
                         else {
                             http_response_code(400);
-                            echo "no updated recipeBook, check the changes o the id entered";
+                            echo "no updated recipeBook, fill in all the fields o check the id entered";
 
                         }
                     }
@@ -119,6 +120,7 @@
                     $result = json_encode(recipeBook::byIdRecipeBook($_GET['idRecipeBook']));
                     $comprobacion=$result=="[]";
                     if($comprobacion==1){
+                    http_response_code(400);
                     echo "No recipe book was found with this id";
                     }else{
                         echo $result;

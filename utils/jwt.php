@@ -22,6 +22,7 @@ class AuthNew
         );
 
         return JWT::encode($token, self::$secret_key);
+
     }
 
 

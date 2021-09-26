@@ -25,7 +25,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "IngredienteRecipe no registered, complete all data correctly";
+                        echo "IngredienteRecipe no registered, fill in all the fields o check the id entered";
 
                     }
                 }
@@ -50,7 +50,7 @@
                         }
                         else {
                             http_response_code(400);
-                            echo "no updated IngredienteRecipe, check the changes o the id entered";
+                            echo "no updated IngredienteRecipe, fill in all the fields o check the id entered";
 
                         }
                     }
@@ -113,6 +113,7 @@
                     $result = json_encode(ingredientRecipe::byIdIngredientRecipe($_GET['idIngredient']));
                     $comprobacion=$result=="[]";
                     if($comprobacion==1){
+                    http_response_code(400);
                     echo "No IngredienteRecipe was found with this id";
                     }else{
                         echo $result;

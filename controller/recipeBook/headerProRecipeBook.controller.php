@@ -24,7 +24,7 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerProcedureRecipeBook no registered, complete all data correctly";
+                        echo "headerProcedureRecipeBook no registered, fill in all the fields o check the id entered";
 
                     }
                 }
@@ -49,7 +49,7 @@
                         }
                         else {
                             http_response_code(400);
-                            echo "no updated headerProcedureRecipeBook, check the changes o the id entered";
+                            echo "no updated headerProcedureRecipeBook, fill in all the fields o check the id entered";
 
                         }
                     }
@@ -116,6 +116,7 @@
                     $result = json_encode(headerProRecipeBook::getbyIdHeaderProRecipeBook($_GET['idHeaderProcedureRecipeBook']));
                     $comprobacion=$result=="[]";
                     if($comprobacion==1){
+                    http_response_code(400);
                     echo "No headerProcedureRecipeBook  was found with this id";
                     }else{
                         echo $result;
