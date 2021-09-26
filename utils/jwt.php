@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 require_once '../../vendor/autoload.php';
 
 use \Firebase\JWT\JWT;
@@ -9,7 +11,7 @@ class AuthNew
     private static $secret_key = 'passAuth';
 
 
-    public static function createToken($idAuth, $webSiteName, $pasword_)
+    public static function createToken($idAuth, $webSiteName)
     {
         $time = time();
 
@@ -17,11 +19,14 @@ class AuthNew
             'iat' => $time,
             'exp' => $time + ( 604800.02* 604800.02),
             
-                'idAuth' => $idAuth,
-                'webSiteName'=> $webSiteName,
+            'idAuth' => $idAuth,
+            'webSiteName'=> $webSiteName,
         );
 
-        return JWT::encode($token, self::$secret_key);
+
+        $arrayToken = array('Bearer token' => JWT::encode($token, self::$secret_key));
+        return json_encode($arrayToken);
+
 
     }
 

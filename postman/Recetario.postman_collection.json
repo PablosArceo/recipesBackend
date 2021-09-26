@@ -1431,12 +1431,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2NzgxNDUsImV4cCI6MzY3NDE1NzQyMzM3LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.P7XLoXVouSVQEwLYOIBHYgmYSVoP_KfDsX46RFxsgmA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2OTcwOTQsImV4cCI6MzY3NDE1NzYxMjg2LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.WaasJgO76OmUk9_WRrNiDw_cJvROLhWeUf8dv1eauzw",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook&idRecipeBook=2",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook&idRecipeBook=1",
 									"host": [
 										"localhost"
 									],
@@ -1453,7 +1453,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "2"
+											"value": "1"
 										}
 									]
 								}
@@ -2205,7 +2205,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"ingredientDatail\": \"Agua fría w\",\r\n        \"percentage\": \"100%\",\r\n        \"quantityPounds\": \"2\",\r\n        \"quantityOunces\": \"-\",\r\n        \"idHeaderIngredientRecipe\": 4\r\n       \r\n\r\n    }",
+									"raw": "  {\r\n        \"ingredientDatail\": \"Harina Espiga Artesana\",\r\n        \"percentage\": \"100%\",\r\n        \"quantityPounds\": \"2\",\r\n        \"quantityOunces\": \"-\",\r\n        \"idHeaderIngredientRecipe\": 1\r\n       \r\n\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2213,7 +2213,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=updateIngreRecipe&idIngredient=21",
+									"raw": "localhost/recetarioBackend/controller/recipe/ingreRecipe.controller.php?op=updateIngreRecipe&idIngredient=1",
 									"host": [
 										"localhost"
 									],
@@ -2230,7 +2230,7 @@
 										},
 										{
 											"key": "idIngredient",
-											"value": "21"
+											"value": "1"
 										}
 									]
 								}
@@ -2432,7 +2432,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\":\"Baguette\",\r\n        \"performance\":\"Rendimientos:\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/pan_caliente/banner_receta/banner-baguette.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/pan_caliente_baguette\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeName\":\"Baguette\",\r\n        \"performance\":\"Redimiento:\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/pan_caliente/banner_receta/banner-baguette.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/pan_caliente_baguette\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2584,7 +2584,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2ODA0MjYsImV4cCI6MzY3NDE1NzQ0NjE4LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.Gf0SIaKjm9osCOX2F1KcRCsZCtIRednn23UzYN1fL5o",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2OTUwODIsImV4cCI6MzY3NDE1NzU5Mjc0LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.U-8u6XTyJDWI8KnKEDJhCHFwYdWtWIckVol5NJoC_ds",
 										"type": "text"
 									}
 								],

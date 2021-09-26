@@ -111,7 +111,7 @@
             }
             else{
                 http_response_code(405);
-                echo "webSiteName es incorrecto ";
+                echo "webSiteName or password incorrect ";
             }
         }
 

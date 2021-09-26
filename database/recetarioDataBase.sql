@@ -74,7 +74,7 @@ CREATE TABLE ingredientRecipeBook(
 CREATE TABLE recipe(
 	idRecipe int not null auto_increment,
     recipeName varchar(50) not null,
-	performance varchar(255) not null,
+	performance varchar(255) null,
 	descriptionRecipe varchar(255) not null,
     img varchar(255) not null,
     url varchar(255) not null,
@@ -122,49 +122,4 @@ CREATE TABLE ingredientRecipe(
     primary key PK_idIngredient (idIngredient),
 	foreign key  (idHeaderIngredientRecipe) references headerIngredientRecipe(idHeaderIngredientRecipe)
 );
-
-select * from procedureRecipeBook;
-
-#--------------------RecipeBook Complete---------------------
-select * from recipeBook;
-
-SELECT re.recipeBookName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
-FROM ingredientRecipeBook pr
- JOIN headerIngredientRecipeBook he 
-ON pr.idHeaderIngredientRecipeBook =he.idHeaderIngredientRecipeBook 
-JOIN recipeBook re  
-ON re.idRecipeBook=he.idRecipeBook
-WHERE re.idAuth=1 and re.idRecipeBook=1;
-
-SELECT he.headerProcedure, pr.procedureRecipeBookStep
-FROM headerProcedureRecipeBook he
-JOIN procedureRecipeBook pr 
-ON he.idHeaderProcedureRecipeBook =pr.idHeaderProcedureRecipeBook
-JOIN recipeBook re  
-ON re.idRecipeBook=he.idRecipeBook
-WHERE re.idAuth=1 and re.idRecipeBook=1;
-
-SELECT descriptionRecipe FROM recipeBook  WHERE idAuth=1;
-
-
-#--------------------Recipe Complete---------------------
-
-/* 2 RECIPE */ 
-SELECT re.recipeName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
-FROM ingredientRecipe pr
-JOIN headerIngredientRecipe he 
-ON pr.idHeaderIngredientRecipe =he.idHeaderIngredientRecipe 
-JOIN recipe re  
-ON re.idRecipe=he.idRecipe
-WHERE re.idAuth=1 and re.idRecipe=1;
-
-SELECT he.headerProcedure, pr.procedureRecipeStep
-FROM headerProcedureRecipe he
-JOIN procedureRecipe pr 
-ON he.idHeaderProcedureRecipe =pr.idHeaderProcedureRecipe
-JOIN recipe re  
-ON re.idRecipe=he.idRecipe
-WHERE re.idAuth=1;
-
-SELECT descriptionRecipe FROM recipe  WHERE idRecipe=1;
 
