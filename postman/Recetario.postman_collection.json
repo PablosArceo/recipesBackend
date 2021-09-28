@@ -1210,12 +1210,12 @@
 									{
 										"key": "Authorization",
 										"type": "text",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzE0ODQzMjAsImV4cCI6MzY3NDE0NTQ4NTEyLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.n9eKhFgMXVifdhQA9nvjIfLRbtnL10-B2Wl30dHOy8A"
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI4MDkzNjgsImV4cCI6MzY3NDE1ODczNTYwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.0bDUO8XMkkJIqjusu5OVBnralfxnLjR8u19QU_cnvis"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeBookName\": \"Corn Dog\",\r\n        \"performance\": \"New\",\r\n        \"descriptionRecipe\": \"Revise la calidad de sus ingredientes Verifique que los utensilios a utilizar estén limpios .Lave correctamente sus manos.\",\r\n        \"img\": \"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetario/portada-recetario/corn-dog.jpg\",\r\n        \"url\": \"$datos->url\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeBookName\": \"Corn Dog 2021\",\r\n        \"performance\": \"New\",\r\n        \"descriptionRecipe\": \"Revise la calidad de sus ingredientes ,Verifique que los utensilios a utilizar estén limpios, Lave correctamente sus manos\",\r\n\r\n        \"img\": \"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetario/portada-recetario/corn-dog.jpg\",\r\n        \"url\": \"$datos->url\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1250,13 +1250,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI3OTc5ODcsImV4cCI6MzY3NDE1ODYyMTc5LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InBhYmxvIn0.UKR_rdABlJMWmhC6pOhdWtaL4PDJUhDp-m1yJt0esAI",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeBookName\": \"Amor en un Brazo Gitano\",\r\n        \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas\",\r\n        \"descriptionRecipe\": \"Revise la calidad de sus ingredientes ,Verifique que los utensilios a utilizar estén limpios, Lave correctamente sus manos\",\r\n        \"img\": \"https://cmiharinaslivescc.sana-cloud.net/recetario_amorenunbrazogitano\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/recetario_amorenunbrazogitano\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeBookName\": \"Test 2020\",\r\n        \"performance\": \"Rendimiento: 2 Unidades de 1 Libra y 4 Onzas\",\r\n         \"descriptionRecipe\": \"Revise la calidad de sus ingredientes ,Verifique que los utensilios a utilizar estén limpios, Lave correctamente sus manos\",\r\n        \"img\": \"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetario/portada-recetario/corn-dog.jpg\",\r\n        \"idAuth\": 2\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1264,7 +1264,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=7",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=updateRecipeBook&idRecipeBook=21",
 									"host": [
 										"localhost"
 									],
@@ -1281,7 +1281,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "7"
+											"value": "21"
 										}
 									]
 								}
@@ -1295,12 +1295,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI0NTMzMjksImV4cCI6MzY3NDE1NTE3NTIxLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.PTXBv-HyNtyaQngoiZOQINl4lZTjgXpKe24AlgVQ_hA",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI4MDkzNjgsImV4cCI6MzY3NDE1ODczNTYwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.0bDUO8XMkkJIqjusu5OVBnralfxnLjR8u19QU_cnvis",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=7",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=deleteRecipeBook&idRecipeBook=33",
 									"host": [
 										"localhost"
 									],
@@ -1317,7 +1317,7 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "7"
+											"value": "33"
 										}
 									]
 								}
@@ -1431,12 +1431,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2OTcwOTQsImV4cCI6MzY3NDE1NzYxMjg2LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.WaasJgO76OmUk9_WRrNiDw_cJvROLhWeUf8dv1eauzw",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI4MDkzNjgsImV4cCI6MzY3NDE1ODczNTYwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.0bDUO8XMkkJIqjusu5OVBnralfxnLjR8u19QU_cnvis",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook&idRecipeBook=1",
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getCompleteRecipeBook&idRecipeBook=2",
 									"host": [
 										"localhost"
 									],
@@ -1453,7 +1453,39 @@
 										},
 										{
 											"key": "idRecipeBook",
-											"value": "1"
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI4MDg4MjMsImV4cCI6MzY3NDE1ODczMDE1LjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.URcQOWr_tvVtYN9WK50WU2vLQ7wIBReh7HBqpj2CgiM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost/recetarioBackend/controller/recipeBook/recipeBook.controller.php?op=getTheLastRecipeBook",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"recetarioBackend",
+										"controller",
+										"recipeBook",
+										"recipeBook.controller.php"
+									],
+									"query": [
+										{
+											"key": "op",
+											"value": "getTheLastRecipeBook"
 										}
 									]
 								}
@@ -2391,7 +2423,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\": \"test \",\r\n        \"performance\":\"20 Unidades\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetas/portadas/receta-2.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/boletines/receta-hotcake-mix-inhsa.pdf\",\r\n        \"idAuth\": 2\r\n    }",
+									"raw": "  {\r\n        \"recipeName\": \"test 1010 \",\r\n        \"performance\":\"20 Unidades\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/recetas/portadas/receta-2.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/boletines/receta-hotcake-mix-inhsa.pdf\",\r\n        \"idAuth\": 2\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2432,7 +2464,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\r\n        \"recipeName\":\"Baguette\",\r\n        \"performance\":\"Redimiento:\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/pan_caliente/banner_receta/banner-baguette.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/pan_caliente_baguette\",\r\n        \"idAuth\": 1\r\n    }",
+									"raw": "  {\r\n        \"recipeName\":\"Baguette\",\r\n        \"performance\":\" 300 a 400 gramos o de 11 a 14 onzas y ponlas a reposar durante 3 minutos.\",\r\n        \"descriptionRecipe\": \"Tiempo de horneado: 30 minutos (depende del tamaño) Temperatura del horno 180 °C / 355 °F Una onza equivale a 28 gramos. Una libra equivale a 0.453592 kilo.\",\r\n        \"img\":\"https://cmiharinaslivescc.sana-cloud.net/content/files/images/pan_caliente/banner_receta/banner-baguette.jpg\",\r\n        \"url\":\"https://cmiharinaslivescc.sana-cloud.net/pan_caliente_baguette\",\r\n        \"idAuth\": 1\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2471,12 +2503,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI2MjU0MzgsImV4cCI6MzY3NDE1Njg5NjMwLjAwMDQsImlkQXV0aCI6IjEiLCJ3ZWJTaXRlTmFtZSI6ImNtaWhhcmluYXNsaXZlc2NjIn0.mCv8occVBMncmnvjBhaKlwRFXxoZtyys72aBi1kRlas",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI1NDA4NjIsImV4cCI6MzY3NDE1NjA1MDU0LjAwMDQsImlkQXV0aCI6IjIiLCJ3ZWJTaXRlTmFtZSI6InBhYmxvIn0.M5cFBwKwtVKK-GFr_Vp4-Vs5p6nb98UGVeDN-qu_qng",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=9",
+									"raw": "localhost/recetarioBackend/controller/recipe/recipe.controller.php?op=deleteRecipe&idRecipe=17",
 									"host": [
 										"localhost"
 									],
@@ -2493,7 +2525,7 @@
 										},
 										{
 											"key": "idRecipe",
-											"value": "9"
+											"value": "17"
 										}
 									]
 								}

@@ -123,3 +123,50 @@ CREATE TABLE ingredientRecipe(
 	foreign key  (idHeaderIngredientRecipe) references headerIngredientRecipe(idHeaderIngredientRecipe)
 );
 
+
+
+
+SELECT re.recipeBookName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
+FROM ingredientRecipeBook pr
+ JOIN headerIngredientRecipeBook he 
+ON pr.idHeaderIngredientRecipeBook =he.idHeaderIngredientRecipeBook 
+JOIN recipeBook re  
+ON re.idRecipeBook=he.idRecipeBook
+WHERE re.idAuth=1 and re.idRecipeBook=1;
+
+
+
+SELECT re.recipeBookName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, group_concat(pr.ingredientDatail) as 'ingredientDatail',  group_concat(pr.percentage) as 'percentage',  group_concat(pr.quantityPounds) as 'quantityPounds',  group_concat(pr.quantityOunces) as 'quantityOunces', re.performance
+FROM ingredientRecipeBook pr
+ JOIN headerIngredientRecipeBook he 
+ON pr.idHeaderIngredientRecipeBook =he.idHeaderIngredientRecipeBook 
+JOIN recipeBook re  
+ON re.idRecipeBook=he.idRecipeBook
+WHERE re.idAuth=1 and re.idRecipeBook=1
+group by he.headerName;
+
+
+
+
+SELECT  he.headerProcedure, group_concat( pr.procedureRecipeBookStep SEPARATOR '|') as 'steps'
+FROM headerProcedureRecipeBook he
+JOIN procedureRecipeBook pr 
+ON he.idHeaderProcedureRecipeBook =pr.idHeaderProcedureRecipeBook
+JOIN recipeBook re  
+ON re.idRecipeBook=he.idRecipeBook
+WHERE re.idRecipeBook=2
+group by he.headerProcedure;
+
+
+
+
+
+
+
+
+
+SELECT descriptionRecipe FROM recipeBook  WHERE idAuth=1;
+
+
+
+SELECT * FROM recipeBook  where idAuth=2 ORDER BY idRecipeBook DESC LIMIT 1;

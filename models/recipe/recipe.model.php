@@ -144,21 +144,23 @@ require_once "../../utils/jwt.php";
                     $query2 = "SELECT idAuth FROM recipe WHERE idRecipe='{$idRecipe}'";
                     $result = self::exectQueryOne($query2);
             
-                    $sentQuery = "SELECT re.recipeName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
-                    FROM ingredientRecipe pr
-                    JOIN headerIngredientRecipe he 
-                    ON pr.idHeaderIngredientRecipe =he.idHeaderIngredientRecipe 
-                    JOIN recipe re  
-                    ON re.idRecipe=he.idRecipe
-                    WHERE re.idRecipe='{$idRecipe}'";
+                    $sentQuery = "SELECT re.recipeName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, group_concat(pr.ingredientDatail) as 'ingredientDatail',  group_concat(pr.percentage) as 'percentage',  group_concat(pr.quantityPounds) as 'quantityPounds',  group_concat(pr.quantityOunces) as 'quantityOunces', re.performance
+                                FROM ingredientRecipe pr
+                                JOIN headerIngredientRecipe he 
+                                ON pr.idHeaderIngredientRecipe =he.idHeaderIngredientRecipe 
+                                JOIN recipe re  
+                                ON re.idRecipe=he.idRecipe
+                                WHERE re.idRecipe=$idRecipe
+                                group by he.headerName";
             
-                    $sentQuery2 = "SELECT he.headerProcedure, pr.procedureRecipeStep
-                    FROM headerProcedureRecipe he
-                    JOIN procedureRecipe pr 
-                    ON he.idHeaderProcedureRecipe =pr.idHeaderProcedureRecipe
-                    JOIN recipe re  
-                    ON re.idRecipe=he.idRecipe
-                    WHERE re.idRecipe='{$idRecipe}'";
+                    $sentQuery2 = " SELECT  he.headerProcedure, group_concat( pr.procedureRecipeStep) as 'steps'
+                                FROM headerProcedureRecipe he
+                                JOIN procedureRecipe pr 
+                                ON he.idHeaderProcedureRecipe =pr.idHeaderProcedureRecipe
+                                JOIN recipe re  
+                                ON re.idRecipe=he.idRecipe
+                                WHERE re.idRecipe=$idRecipe
+                                group by he.headerProcedure";
             
                     $sentQuery3 = "SELECT descriptionRecipe FROM recipe  WHERE idRecipe='{$idRecipe}'";
             
@@ -188,14 +190,15 @@ require_once "../../utils/jwt.php";
                             }
                             if ($resultado2) {
                                 if ($resultado2->num_rows) {
+                    
                                     while ($row = $resultado2->fetch_assoc()) {
                                         $datos[] = [
                                             'headerProcedure' => $row['headerProcedure'],
-                                            'procedureRecipeStep' => $row['procedureRecipeStep'],
-            
-            
+                                            'steps' => $row['steps'],
                                         ];
+                            
                                     }
+                    
                                     if ($resultado3) {
                                         if ($resultado3->num_rows) {
                                             while ($row = $resultado3->fetch_assoc()) {

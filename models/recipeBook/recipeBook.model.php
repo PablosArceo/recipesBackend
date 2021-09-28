@@ -96,8 +96,7 @@ class recipeBook extends Connection
                       WHERE idRecipeBook=$idRecipeBook";
                 return self::globalService($sentQuery, $idAuth, FALSE);
             } else {
-                return FALSE;
-            }
+                return false;            }
         }
     }
 
@@ -134,26 +133,31 @@ class recipeBook extends Connection
     }
 
 
+
+
+
     public static function getCompleteRecipeBook($idRecipeBook)
     {
         $query2 = "SELECT idAuth FROM recipeBook WHERE idRecipeBook='{$idRecipeBook}'";
         $result = self::exectQueryOne($query2);
 
-        $sentQuery = "SELECT re.recipeBookName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, pr.ingredientDatail, pr.percentage, pr.quantityPounds, pr.quantityOunces, re.performance
+        $sentQuery = "SELECT re.recipeBookName, he.headerName,re.img, re.url, re.creationDate, re.updateDate, group_concat(pr.ingredientDatail) as 'ingredientDatail',  group_concat(pr.percentage) as 'percentage',  group_concat(pr.quantityPounds) as 'quantityPounds',  group_concat(pr.quantityOunces) as 'quantityOunces', re.performance
                     FROM ingredientRecipeBook pr
                     JOIN headerIngredientRecipeBook he 
                     ON pr.idHeaderIngredientRecipeBook =he.idHeaderIngredientRecipeBook 
                     JOIN recipeBook re  
                     ON re.idRecipeBook=he.idRecipeBook
-                    WHERE re.idRecipeBook='{$idRecipeBook}'";
+                    WHERE re.idRecipeBook=$idRecipeBook
+                    group by he.headerName";
 
-        $sentQuery2 = "SELECT he.headerProcedure, pr.procedureRecipeBookStep
+        $sentQuery2 = " SELECT  he.headerProcedure, group_concat( pr.procedureRecipeBookStep) as 'steps'
                     FROM headerProcedureRecipeBook he
                     JOIN procedureRecipeBook pr 
                     ON he.idHeaderProcedureRecipeBook =pr.idHeaderProcedureRecipeBook
                     JOIN recipeBook re  
                     ON re.idRecipeBook=he.idRecipeBook
-                    WHERE re.idRecipeBook='{$idRecipeBook}'";
+                    WHERE re.idRecipeBook=$idRecipeBook
+                    group by he.headerProcedure";
 
         $sentQuery3 = "SELECT descriptionRecipe FROM recipeBook  WHERE idRecipeBook='{$idRecipeBook}'";
 
@@ -183,14 +187,15 @@ class recipeBook extends Connection
                 }
                 if ($resultado2) {
                     if ($resultado2->num_rows) {
+        
                         while ($row = $resultado2->fetch_assoc()) {
                             $datos[] = [
                                 'headerProcedure' => $row['headerProcedure'],
-                                'procedureRecipeBookStep' => $row['procedureRecipeBookStep'],
-
-
+                                'steps' => $row['steps'],
                             ];
+                
                         }
+        
                         if ($resultado3) {
                             if ($resultado3->num_rows) {
                                 while ($row = $resultado3->fetch_assoc()) {

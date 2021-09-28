@@ -19,18 +19,19 @@
 
                     $createRecipeBook =recipeBook::insertRecipeBook($datos->recipeBookName, $datos->performance,$datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth);
                     if($createRecipeBook) {
-                        echo("recipeBook registered");
                         http_response_code(200);
+                        echo json_encode("Recipe Registered");
+
                     }
                     else {
-                        echo "recipeBook no registered, fill in all the fields o check the id entered";
+                        echo json_encode("recipeBook no registered, fill in all the fields o check the id entered");
                         http_response_code(400);
 
 
                     }
                 }
                 else {
-                    echo "internal error";
+                    echo json_encode("internal error");
                     http_response_code(405);
 
 
@@ -45,19 +46,25 @@
 
                         if(recipeBook::updateRecipeBook($idRecipeBook, $datos->recipeBookName, $datos->performance, $datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
                             http_response_code(200);
-                            echo "updated recipeBook";
+                            echo "Recipe Updated";
+                            echo json_encode(recipeBook::byIdRecipeBook($_GET['idRecipeBook']));
+
 
                         }
                         else {
+                        
+
+                            echo json_encode("no updated recipeBook, fill in all the fields o check the id entered");
                             http_response_code(400);
-                            echo "no updated recipeBook, fill in all the fields o check the id entered";
+/*                             echo json_encode(recipeBook::byIdRecipeBook($_GET['idRecipeBook']));
+ */
 
                         }
                     }
                     else {
                         http_response_code(405);
-                        echo "interal error";
-
+                        echo json_encode("internal error");
+ 
                     }
                     break;
 
@@ -71,20 +78,21 @@
 
                     if(recipeBook::deleteRecipeBook($idRecipeBook)) {
                       http_response_code(200);
-                      echo "deleted recipeBook";
+
+                      echo json_encode("RecipeBook deleted");
 
 
                   }
                 else {
                       http_response_code(400);
-                      echo "no deleted recipeBook, check idRecipeBook o the id entered";
+                     echo json_encode("no deleted recipeBook, check idRecipeBook o the id entered");
 
                   }
               }
               else {
                   http_response_code(405);
-                  echo "internal error ";
-              }
+                  echo json_encode("internal error");
+                }
               break;
 
 
@@ -101,6 +109,10 @@
                         }
             break;
 
+
+         
+
+            
 
             case 'getYourRecipeBook':
                 if(recipeBook::getYourRecipeBook()) {
