@@ -22,11 +22,11 @@ switch ($_GET['op']) {
                 echo "ProcedureRecipe registered";
             } else {
                 http_response_code(400);
-                echo "ProcedureRecipe no registered, fill in all the fields o check the id entered";
+                echo json_encode("ProcedureRecipe no registered, fill in all the fields o check the id entered");
             }
         } else {
             http_response_code(405);
-            echo "internal error";
+            echo json_encode("internal error");
         }
         break;
 
@@ -43,9 +43,12 @@ switch ($_GET['op']) {
             )) {
                 http_response_code(200);
                 echo "updated ProcedureRecipe";
+                echo json_encode(procedureRecipe::byIdProcedureRecipe($_GET['idProcedureRecipe']));
             } else {
                 http_response_code(400);
                 echo "no updated ProcedureRecipe, fill in all the fields o check the id entered";
+                echo json_encode(procedureRecipe::byIdProcedureRecipe($_GET['idProcedureRecipe']));
+
             }
         } else {
             http_response_code(405);
@@ -66,10 +69,12 @@ switch ($_GET['op']) {
             } else {
                 http_response_code(400);
                 echo "no deleted ProcedureRecipe, check idProcedureRecip";
+                echo json_encode(procedureRecipe::byIdProcedureRecipe($_GET['idProcedureRecipe']));
+
             }
         } else {
             http_response_code(405);
-            echo "internal error ";
+            echo json_encode("internal error");
         }
         break;
 

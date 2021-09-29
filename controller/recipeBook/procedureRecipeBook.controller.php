@@ -4,6 +4,7 @@
     require_once "../../connection/connection.php";
     require_once "../../models/recipeBook/procedureRecipeBook.model.php";
 
+    error_reporting(0);
 
     $procedureRecipeBook = new ProcedureRecipeBook();
     $body = json_encode(file_get_contents("php://input"),true);
@@ -24,13 +25,13 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "ProcedureRecipeBook no registered, fill in all the fields o check the id entered";
+                        echo json_encode("ProcedureRecipeBook no registered, fill in all the fields o check the id entered");
 
                     }
                 }
                 else {
                     http_response_code(405);
-                    echo "internal error";
+                    echo json_encode("internal error");
 
                 }
                 break;
@@ -46,17 +47,19 @@
                         $datos->idHeaderProcedureRecipeBook)) {
                             http_response_code(200);
                             echo "updated ProcedureRecipeBook";
+                            echo json_encode(ProcedureRecipeBook::byIdProcedureRecipeBook($_GET['idProcedureRecipeBook']));
 
                         }
                         else {
                             http_response_code(400);
                             echo "no updated ProcedureRecipeBook, fill in all the fields o check the id entered";
+                            echo json_encode(ProcedureRecipeBook::byIdProcedureRecipeBook($_GET['idProcedureRecipeBook']));
 
                         }
                     }
                     else {
                         http_response_code(405);
-                        echo "internal error";
+                        echo json_encode("internal error");
 
                     }
                     break;
@@ -72,18 +75,19 @@
                             if(procedureRecipeBook::deleteProcedureRecipeBook($idProcedureRecipeBook)) {
                               http_response_code(200);
                               echo "deleted ProcedureRecipeBook";
-        
+
         
                           }
                         else {
                               http_response_code(400);
                               echo "no deleted ProcedureRecipeBook, check idProcedureRecipeBook o the id entered";
-        
+                              echo json_encode(ProcedureRecipeBook::byIdProcedureRecipeBook($_GET['idProcedureRecipeBook']));
+
                           }
                       }
                       else {
                           http_response_code(405);
-                          echo "internal error ";
+                          echo json_encode("internal error") ;
                       }
                       break;
         

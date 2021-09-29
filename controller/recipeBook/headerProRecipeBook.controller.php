@@ -4,6 +4,8 @@
     require_once "../../connection/connection.php";
     require_once "../../models/recipeBook/headerProRecipeBook.model.php";
 
+    error_reporting(0);
+
 
     $headerProRecipeBook = new HeaderProRecipeBook();
     $body = json_encode(file_get_contents("php://input"),true);
@@ -24,13 +26,13 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerProcedureRecipeBook no registered, fill in all the fields o check the id entered";
+                        echo json_encode("headerProcedureRecipeBook no registered, fill in all the fields o check the id entered");
 
                     }
                 }
                 else {
                     http_response_code(405);
-                    echo "internal error";
+                    echo json_encode("internal error");
 
                 }
                 break;
@@ -45,17 +47,19 @@
                         $datos->idRecipeBook)) {
                             http_response_code(200);
                             echo "updated headerProcedureRecipeBook";
+                            echo json_encode(headerProRecipeBook::getbyIdHeaderProRecipeBook($_GET['idHeaderProcedureRecipeBook']));
 
                         }
                         else {
                             http_response_code(400);
                             echo "no updated headerProcedureRecipeBook, fill in all the fields o check the id entered";
+                            echo json_encode(headerProRecipeBook::getbyIdHeaderProRecipeBook($_GET['idHeaderProcedureRecipeBook']));
 
                         }
                     }
                     else {
                         http_response_code(405);
-                        echo "interal error";
+                        echo json_encode("internal error");
 
                     }
                     break;
@@ -72,17 +76,17 @@
                       http_response_code(200);
                       echo "deleted headerProcedureRecipeBook";
 
-
                   }
                 else {
                       http_response_code(400);
                       echo "no deleted headerProcedureRecipeBook, check idHeaderProcedureRecipeBook";
+                      echo json_encode(headerProRecipeBook::getbyIdHeaderProRecipeBook($_GET['idHeaderProcedureRecipeBook']));
 
                   }
               }
               else {
                   http_response_code(405);
-                  echo "internal error ";
+                  echo json_encode("internal error ");
               }
               break;
 

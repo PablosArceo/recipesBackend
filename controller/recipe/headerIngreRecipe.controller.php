@@ -25,13 +25,13 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerIngredientRecipe no registered, fill in all the fields o check the id entered";
+                        echo json_encode("headerIngredientRecipe no registered, fill in all the fields o check the id entered");
 
                     }
                 }
                 else {
                     http_response_code(405);
-                    echo "internal error";
+                    echo  json_encode("internal error");
 
                 }
                 break;
@@ -46,17 +46,19 @@
                         $datos->idRecipe)) {
                             http_response_code(200);
                             echo "updated headerIngredientRecipe";
+                            echo json_encode(headerIngredientRecipe::byIdHeaderIngreRecipe($_GET['idHeaderIngredientRecipe']));
 
                         }
                         else {
                             http_response_code(400);
                             echo "no updated headerIngreRecipe, fill in all the fields o check the id entered";
+                            echo json_encode(headerIngredientRecipe::byIdHeaderIngreRecipe($_GET['idHeaderIngredientRecipe']));
 
                         }
                     }
                     else {
                         http_response_code(405);
-                        echo "interal error";
+                        echo json_encode("interal error");
 
                     }
                     break;
@@ -77,12 +79,13 @@
                 else {
                       http_response_code(400);
                       echo "no deleted headerIngreRecipe, check idHeaderIngredientRecipe";
+                      echo json_encode(headerIngredientRecipe::byIdHeaderIngreRecipe($_GET['idHeaderIngredientRecipe']));
 
                   }
               }
               else {
                   http_response_code(405);
-                  echo "internal error ";
+                  echo json_encode("internal error");
               }
               break;
 

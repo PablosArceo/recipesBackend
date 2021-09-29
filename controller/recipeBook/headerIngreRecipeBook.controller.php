@@ -4,6 +4,7 @@
     require_once "../../connection/connection.php";
     require_once "../../models/recipeBook/headerIngreRecipeBook.model.php";
 
+    error_reporting(0);
 
     $headerIngreRecipeBook = new headerIngreRecipeBook();
     $body = json_encode(file_get_contents("php://input"),true);
@@ -24,13 +25,13 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "headerIngredientRecipeBook no registered, fill in all the fields  o check the id entered";
+                        echo json_encode("headerIngredientRecipeBook no registered, fill in all the fields  o check the id entered");
 
                     }
                 }
                 else {
                     http_response_code(405);
-                    echo "internal error";
+                    echo json_encode("internal error");
 
                 }
                 break;
@@ -45,11 +46,13 @@
                         $datos->idRecipeBook)) {
                             http_response_code(200);
                             echo "updated headerIngredientRecipeBook";
+                            echo json_encode(headerIngreRecipeBook::byIdHeaderIngreRecipeBook($_GET['idHeaderIngredientRecipeBook']));
 
                         }
                         else {
                             http_response_code(400);
                             echo "no updated headerIngreRecipeBook, fill in all the fields o check the id entered";
+                            echo json_encode(headerIngreRecipeBook::byIdHeaderIngreRecipeBook($_GET['idHeaderIngredientRecipeBook']));
 
                         }
                     }
@@ -77,12 +80,13 @@
                 else {
                       http_response_code(400);
                       echo "no deleted headerIngreRecipeBook, check idHeaderIngredientRecipeBook";
+                      echo json_encode(headerIngreRecipeBook::byIdHeaderIngreRecipeBook($_GET['idHeaderIngredientRecipeBook']));
 
                   }
               }
               else {
                   http_response_code(405);
-                  echo "internal error ";
+                  echo json_encode("internal error ");
               }
               break;
 

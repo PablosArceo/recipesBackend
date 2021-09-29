@@ -19,7 +19,7 @@
                     if(Recipe::insertRecipe($datos->recipeName,$datos->performance,
                     $datos->descriptionRecipe,$datos->img,$datos->url, $datos->idAuth)) {
                         http_response_code(200);
-                        echo json_encode("RecipeBook Registered");
+                        echo "Recipe Registered";
 
                     }
                     else {
@@ -76,7 +76,8 @@
                   }
                 else {
                     http_response_code(400);
-                    echo json_encode("no deleted recipeBook, check idRecipeBook o the id entered");
+                    echo "no deleted recipeBook, check idRecipeBook o the id entered";
+                    echo json_encode(Recipe::byIdRecipe($_GET['idRecipe']));
 
                   }
               }

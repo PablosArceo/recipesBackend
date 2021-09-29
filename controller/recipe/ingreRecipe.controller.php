@@ -25,13 +25,13 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "IngredienteRecipe no registered, fill in all the fields o check the id entered";
+                        echo json_encode("IngredienteRecipe no registered, fill in all the fields o check the id entered");
 
                     }
                 }
                 else {
                     http_response_code(405);
-                    echo "internal error";
+                    echo json_encode("internal error");
 
                 }
                 break;
@@ -51,12 +51,12 @@
                         else {
                             http_response_code(400);
                             echo "no updated IngredienteRecipe, fill in all the fields o check the id entered";
-
+                            echo json_encode(ingredientRecipe::byIdIngredientRecipe($_GET['idIngredient']));
                         }
                     }
                     else {
                         http_response_code(405);
-                        echo "internal error";
+                        echo json_encode("internal error");
 
                     }
                     break;
@@ -77,12 +77,14 @@
                         else {
                               http_response_code(400);
                               echo "no deleted Ingredient, check idIngredient";
+                              echo json_encode(ingredientRecipe::byIdIngredientRecipe($_GET['idIngredient']));
+
         
                           }
                       }
                       else {
                           http_response_code(405);
-                          echo "internal error ";
+                          echo json_encode("internal error ");
                       }
                       break;
         

@@ -4,6 +4,7 @@
     require_once "../../connection/connection.php";
     require_once "../../models/recipeBook/ingredientRecipeBook.model.php";
 
+    error_reporting(0);
 
     $ingredientRecipeBook = new IngredientRecipeBook();
     $body = json_encode(file_get_contents("php://input"),true);
@@ -25,13 +26,13 @@
                     }
                     else {
                         http_response_code(400);
-                        echo "IngredienteRecipeBook no registered, fill in all the fields o check the id entered ";
+                        echo json_encode("IngredienteRecipeBook no registered, fill in all the fields o check the id entered ");
 
                     }
                 }
                 else {
                     http_response_code(405);
-                    echo "internal error";
+                    echo json_decode("internal error");
 
                 }
                 break;
@@ -47,17 +48,19 @@
                         $datos->quantityOunces,$datos->idHeaderIngredientRecipeBook)) {
                             http_response_code(200);
                             echo "updated IngredienteRecipeBook";
+                            echo json_encode(ingredientRecipeBook::byIdIngredientRecipeBook($_GET['idIngredient']));
 
                         }
                         else {
                             http_response_code(400);
                             echo "no updated IngredienteRecipeBook, fill in all the fields o check the id entered";
+                            echo json_encode(ingredientRecipeBook::byIdIngredientRecipeBook($_GET['idIngredient']));
 
                         }
                     }
                     else {
                         http_response_code(405);
-                        echo "internal error";
+                        echo json_encode("internal error");
 
                     }
                     break;
@@ -79,12 +82,14 @@
                         else {
                               http_response_code(400);
                               echo "no deleted Ingredient, check idIngredient";
+                              echo json_encode(ingredientRecipeBook::byIdIngredientRecipeBook($_GET['idIngredient']));
+
         
                           }
                       }
                       else {
                           http_response_code(405);
-                          echo "internal error ";
+                          echo json_encode("internal error") ;
                       }
                       break;
         
